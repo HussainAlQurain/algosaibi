@@ -8,13 +8,23 @@ if (navToggle && navMenu) {
     navMenu.classList.toggle("is-open");
   });
 
-  navMenu.querySelectorAll("a").forEach((link) => {
+  navMenu.querySelectorAll("a:not(.nav-dropdown-toggle)").forEach((link) => {
     link.addEventListener("click", () => {
       navToggle.setAttribute("aria-expanded", "false");
       navMenu.classList.remove("is-open");
     });
   });
 }
+
+// Mobile companies dropdown toggle
+document.querySelectorAll(".nav-dropdown-toggle").forEach((toggle) => {
+  toggle.addEventListener("click", (e) => {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      toggle.closest(".nav-dropdown").classList.toggle("is-open");
+    }
+  });
+});
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -31,4 +41,11 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((element) => {
   observer.observe(element);
+});
+
+document.querySelectorAll('a[href="#top"]').forEach((anchor) => {
+  anchor.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });

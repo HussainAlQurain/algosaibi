@@ -12,10 +12,10 @@ const COMPANY_DATA = {
         "raymond_temp_2026-04-23_08_52_31.183222.webp"
       ],
       paragraphs: [
-        "Raymond Saudi Arabia Limited (RSAL) was established in 1976 as a Saudi American construction partnership. The company was formed as a subsidiary of Raymond International Builders, USA, and later became fully owned by the A.H. Al-Gosaibi & Bros. Group with its head office in Al Khobar.",
-        "RSAL operates through Pipeline Services and Industrial Projects divisions. Its pipeline and construction activities can be performed across the Kingdom, supported by a full service pipeline terminal between Dammam and Jubail and specialized cement mortar lining plants in Jubail and Jeddah.",
-        "The company provides engineering, design, procurement, fabrication, installation, rehabilitation, testing, commissioning, and project management services for pipeline and industrial construction sectors. It has completed projects for Saudi Aramco, Saudi Electricity Company, SWCC, the Royal Commission for Jubail and Yanbu, and SABIC affiliates.",
-        "RSAL has also proven expertise in performing work during critical restricted plant shutdown periods."
+        "Raymond Saudi Arabia Limited (RSAL) was established in 1976 as a Saudi-American construction partnership. The Company was formed as a subsidiary of Raymond International Builders, USA, incorporated in 1892 and long recognized as a leader in pipeline construction, industrial plants, offshore and onshore reinforced concrete installations, piling, port and harbor works, and rapid-transit construction. It is now wholly owned by the A.H. Al-Gosaibi & Bros. Group, with its head office in Al Khobar.",
+        "Raymond Saudi Arabia Ltd. operates through two divisions: Pipeline Services and Industrial Projects. Pipeline and construction activities can be performed throughout the Kingdom, supported by a full-service Pipeline Services Terminal (Eastern Province Complex - EPC) located midway between Dammam and Jubail, in addition to specialized cement mortar lining plants in Jubail and Jeddah.",
+        "The Company serves pipeline and industrial construction sectors through engineering, design, procurement, fabrication, installation, rehabilitation, testing, commissioning, and project management.",
+        "RSAL has completed projects for major government and private sector clients including Saudi Aramco, Saudi Electricity Company, Saline Water Conversion Corporation, the Royal Commission for Jubail and Yanbu, and SABIC affiliates. It has also demonstrated proven expertise during critical restricted plant shutdown periods."
       ]
     },
     "gosaibi-foods": {
@@ -23,12 +23,12 @@ const COMPANY_DATA = {
       category: "Consumer Business",
       industry: "Consumer Business",
       subIndustry: "Fast Food Restaurants",
-      locations: "18 locations across Khobar, Dammam, Hassa, and Dhahran",
+      locations: "18 locations across Khobar, Dammam, Al Ahsa, and Dhahran",
       image: "gfc-company-1_2026-04-23_08_52_29.890044.webp",
       gallery: ["gfc-company-1_2026-04-23_08_52_29.890044.webp"],
       paragraphs: [
         "Gosaibi Foods Company was established with the objective of expanding food service enterprises in Saudi Arabia.",
-        "The company oversees its own food warehouse and distribution operations, in addition to managing catering services, fine dining, quick service restaurants, and retail operations."
+        "The Company oversees its own food warehouse and distribution operations, in addition to managing catering services, fine dining, quick-service restaurants, and retail operations."
       ]
     },
     "solar-arabia": {
@@ -43,15 +43,15 @@ const COMPANY_DATA = {
         "energy-banner1_2026-04-23_08_52_28.913351.webp"
       ],
       paragraphs: [
-        "Solar Arabia is a specialized consulting and project development joint venture with a focus on renewable energies.",
-        "The company operates in one of the market's most dynamic segments and supports clients with specialized development insight and energy transition opportunities."
+        "Solar Arabia is a specialized consulting and project development joint venture with a focus on renewable energy.",
+        "The Company serves one of today's most dynamic markets through specialized development support and renewable energy expertise."
       ]
     },
     "tecmo-arabia": {
       name: "Tecmo Arabia Ltd",
       category: "Energy & Power",
       industry: "Power",
-      subIndustry: "Labour and Contracting",
+      subIndustry: "Labor and Contracting",
       locations: "Dammam Industrial City",
       image: "tecmo-arabia-company.webp",
       gallery: [
@@ -59,9 +59,9 @@ const COMPANY_DATA = {
         "energy-banner1_2026-04-23_08_52_28.913351.webp"
       ],
       paragraphs: [
-        "Tecmo Arabia Ltd is one of the Ahmad Hamad Algosaibi & Bros. Group of Companies and one of the leading contractors in the field of power generation.",
-        "The company specializes in gas turbines and generators operation, maintenance, overhaul, repair, rejuvenation of hot components, and services related to diesels, pumps, and rotating equipment.",
-        "With more than 20 years of experience, Tecmo Arabia maintains technical staff covering mechanical, electrical, and instrumentation works."
+        "Tecmo Arabia Ltd. is one of the Ahmad Hamad Algosaibi & Bros. Group companies and one of the leading contractors in the field of power generation.",
+        "The Company specializes in the operation and maintenance of gas turbines and generators, as well as overhaul, repair, and rejuvenation of hot components. It also supplies, erects, and operates diesel units, pumps, and miscellaneous rotating equipment.",
+        "With more than 20 years of experience in the field, Tecmo Arabia maintains technical staff covering mechanical, electrical, and instrumentation works."
       ]
     },
     "crown-arabia": {
@@ -76,8 +76,8 @@ const COMPANY_DATA = {
         "National_Factory_for_Can_Ends_Ltd-company-1_2026-04-23_08_52_30.781565.webp"
       ],
       paragraphs: [
-        "Crown Arabia is one of the leading manufacturers of aluminium drinks cans in the Middle East.",
-        "The company is a joint venture between Ahmad Hamad Al Gosaibi & Bros. Co. and Crown Cork & Seal Co. Inc. (USA), operating production facilities in Jeddah and Dammam."
+        "Crown Arabia is one of the leading manufacturers of aluminium beverage cans in the Middle East.",
+        "The Company is a joint venture between Ahmad Hamad Al Gosaibi & Bros. Co. and Crown Cork & Seal Co. Inc. (USA), operating two production facilities in the Kingdom of Saudi Arabia, specifically in Jeddah and Dammam."
       ]
     },
     "national-factory-for-can-ends": {
@@ -92,9 +92,9 @@ const COMPANY_DATA = {
         "Crown-company-1_2026-04-23_08_52_28.136587.webp"
       ],
       paragraphs: [
-        "National Factory for Can Ends Ltd. (NAFCEL) is one of Ahmad Hamad Al Gosaibi & Bros.' most successful joint ventures and one of the Middle East's premier manufacturers of easy open can ends.",
-        "NAFCEL was among the first national factories to achieve Lloyd's Register ISO 9002 certification on quality assurance systems.",
-        "A joint venture between AHAB, Crown Cork & Seal, and other Saudi partners, NAFCEL uses advanced can manufacturing technology and quality control to serve the GCC and broader Middle East and Europe markets."
+        "National Factory for Can Ends Ltd. (NAFCEL) is one of Ahmad Hamad Al Gosaibi & Bros.' most successful joint ventures. As one of the Middle East's premier manufacturers of easy-open can ends, including ring-pull and stay-on-tab formats, NAFCEL was among the first national factories to achieve Lloyd's Register ISO 9002 certification for quality assurance systems.",
+        "A joint venture between AHAB, Crown Cork & Seal, and several Saudi partners, NAFCEL uses advanced can-manufacturing technology and quality control systems that meet the highest international standards.",
+        "Its major markets include GCC countries as well as other destinations across the Middle East and Europe, serving major beverage manufacturers throughout the region."
       ]
     },
     "eastern-insulation-company": {
@@ -109,9 +109,9 @@ const COMPANY_DATA = {
         "main-company-banner_2026-04-23_08_52_30.588511.webp"
       ],
       paragraphs: [
-        "Eastern Insulation Company (EICO) was the first producer of polyethylene foam insulation products in the Gulf region.",
-        "The company manufactures more than two hundred tons of resin product monthly and has substantial experience supplying major public and private construction projects with customized insulation solutions.",
-        "EICO exports to multiple countries in the region and has implemented advanced sales coordination systems to provide a worry-free client experience."
+        "Eastern Insulation Company (EICO), a subsidiary of the Ahmad Hamad Al-Gosaibi Group, was the first producer of polyethylene foam insulation products in the Gulf region.",
+        "The Company manufactures more than two hundred tons of resin products monthly and has substantial experience supplying major construction projects with customized insulation solutions. EICO has demonstrated punctual order delivery and provides cost-effective solutions for public and private mega-projects across the region.",
+        "EICO has exported insulation products to Qatar, the UAE, Sudan, Ethiopia, Egypt, Jordan, Kuwait, Yemen, and other destinations in the region for many years. The Company has also implemented a state-of-the-art sales coordination system to respond to customer needs with worry-free service."
       ]
     },
     "jotun-powder-coatings": {
@@ -127,14 +127,14 @@ const COMPANY_DATA = {
       ],
       paragraphs: [
         "Jotun Powder Coatings is one of the world's leading producers and suppliers of powder coatings.",
-        "Its sustainability-led innovations, including energy-saving coating collections for aluminium building components exposed to the sun, reflect a strong long-term commitment to environmentally responsible industrial solutions."
+        "Its sustainability-led innovations, including The Cool Shades Collection, an energy-saving and environmentally friendly coating range for aluminium building components exposed to the sun, reflect a strong long-term commitment to environmentally responsible industrial solutions."
       ]
     },
     "arabian-pipecoating-company": {
       name: "The Arabian Pipecoating Company",
       category: "Manufacturing",
       industry: "Manufacturing",
-      subIndustry: "Pipecoating",
+      subIndustry: "Pipe Coating",
       locations: "Al Khobar, Jubail",
       image: "apco_2026-04-23_08_52_27.538545.webp",
       gallery: [
@@ -143,7 +143,8 @@ const COMPANY_DATA = {
       ],
       paragraphs: [
         "The Arabian Pipecoating Company (APCO) was established in 1983 by A.H. Algosaibi Bros. Co. and Abdulaziz & Sa'ad Al-Moajil Company.",
-        "Today APCO operates as a joint venture with Bredero Shaw, a division of Shawcor Ltd., giving it access to advanced technologies and research facilities serving oil, gas, and water industries in the Gulf region."
+        "APCO later operated as a joint venture with Bredero Shaw, a division of Shawcor Ltd., a growth-oriented energy services company focused on technology-based products for the energy industry.",
+        "That partnership gave APCO access to a robust selection of advanced technologies and research facilities capable of responding to the demands of the oil, gas, and water industries in the Gulf region."
       ]
     },
     "algosaibi-hotel": {
@@ -159,7 +160,7 @@ const COMPANY_DATA = {
       ],
       paragraphs: [
         "A heritage site in its own right, Al Gosaibi Hotel was one of the pioneering hospitality venues in the Kingdom of Saudi Arabia.",
-        "Centrally located in Al Khobar and minutes away from Dhahran, Dammam, commercial centers, King Fahd Causeway, Saudi Aramco, and Dhahran Expo Centre, the hotel offers a strong business and leisure destination for regional travelers."
+        "Centrally located in Al Khobar, the commercial center of the Eastern Province of the Arabian Gulf, and within minutes of Dhahran, Dammam, major commercial centers, King Fahd Causeway, Saudi Aramco, and Dhahran Expo Centre, the hotel offers a convenient destination for business and leisure travelers to the region."
       ]
     },
     iacc: {
@@ -175,7 +176,7 @@ const COMPANY_DATA = {
       ],
       paragraphs: [
         "IACC's clearing and forwarding functions bridge the relationship between shippers, carriers, and receivers.",
-        "The company covers services from document handling up to forward clearance, performed by IACC's own licensed custom brokers."
+        "The Company provides services from document handling through freight clearance, performed by IACC's own licensed customs brokers."
       ]
     },
     "gac-saudi-arabia": {
@@ -192,8 +193,10 @@ const COMPANY_DATA = {
       ],
       paragraphs: [
         "GAC Saudi Arabia is one of the Kingdom's leading shipping agencies, providing shipping services throughout the country's ports.",
-        "The company has grown from a single operational office at Ras Tanura to operations at major ports including Dammam, Al Khafji, Jeddah, Yanbu, Jubail, Ras Tanura, Ras Al-Khafji, Rabigh, and the dry port in Riyadh.",
-        "Backed by the wider GAC Group's global logistics, marine, and shipping network, the company combines local execution with global standards and long-term relationship-driven service."
+        "The Company has grown from a single operational office at Ras Tanura to today's operations at major ports including Dammam, Al Khafji, Jeddah, Yanbu, Jubail, Ras Tanura, Ras Al-Khafji, Rabigh, and the dry port in Riyadh. After more than half a century of operations, it remains one of the Kingdom's leading shipping agencies.",
+        "The GAC Group is committed to ensuring that customers' needs for quality shipping, logistics, and marine services are understood and met. With more than 10,000 professionals working around the clock, speaking over 100 languages, across more than 300 offices in over 40 countries, GAC delivers on that promise.",
+        "Since the first GAC operation was established in Kuwait by Swedish entrepreneur Bengt Lindwall in 1956, the Group has evolved into a widely recognized provider of integrated shipping, logistics, marine, and related services. Its strategy combines steady geographical expansion through organic growth, joint ventures, partnerships, and acquisitions, while remaining local in action and global in attitude.",
+        "The value of human dignity remains one of the cornerstones of GAC's operating philosophy, reflected in its long-term relationships with business partners, customers, suppliers, and employees."
       ]
     }
   },
@@ -406,7 +409,17 @@ const labelMap = {
     gallery: "Gallery",
     back: "Back to Home",
     otherLanguage: "AR",
-    otherLanguageLabel: "Arabic"
+    otherLanguageLabel: "Arabic",
+    siteTitle: "AHALGOSAIBI Group",
+    intro: "Part of the Ahmad Hamad Al-Gosaibi & Bros. Co. portfolio.",
+    footer: "© 2026 Ahmad Hamad Al-Gosaibi & Bros. Co. All rights reserved.",
+    top: "Back to top",
+    profile: "Subsidiary Profile",
+    navCompanies: "Companies",
+    navContact: "Contact",
+    navMedia: "Media & Events",
+    contactGroup: "Contact Group",
+    allCompanies: "All Companies"
   },
   ar: {
     industry: "القطاع",
@@ -417,7 +430,17 @@ const labelMap = {
     gallery: "معرض الصور",
     back: "العودة للرئيسية",
     otherLanguage: "EN",
-    otherLanguageLabel: "English"
+    otherLanguageLabel: "English",
+    siteTitle: "مجموعة القصيبي",
+    intro: "إحدى شركات محفظة أحمد حمد القصيبي وإخوانه.",
+    footer: "© 2026 أحمد حمد القصيبي وإخوانه. جميع الحقوق محفوظة.",
+    top: "العودة للأعلى",
+    profile: "نبذة عن الشركة التابعة",
+    navCompanies: "الشركات",
+    navContact: "اتصل بنا",
+    navMedia: "الإعلام والفعاليات",
+    contactGroup: "تواصل مع المجموعة",
+    allCompanies: "جميع الشركات"
   }
 };
 
@@ -428,6 +451,9 @@ function renderCompanyPage() {
   const base = root.dataset.base || "../";
   const company = COMPANY_DATA[lang]?.[slug];
   const labels = labelMap[lang];
+  const localizedRoot = `${base}${lang === "ar" ? "ar/" : ""}`;
+  const homeHref = `${localizedRoot}index.html`;
+  const mediaHref = `${localizedRoot}media-events.html`;
 
   if (!company) {
     return;
@@ -437,7 +463,62 @@ function renderCompanyPage() {
   document.getElementById("companyCategory").textContent = company.category;
   document.getElementById("companyHeroImage").src = `${base}assets/images/${company.image}`;
   document.getElementById("companyHeroImage").alt = company.name;
-  document.getElementById("pageTitle").textContent = `${company.name} | AHALGOSAIBI Group`;
+  document.getElementById("pageTitle").textContent = `${company.name} | ${labels.siteTitle}`;
+
+  const intro = document.querySelector(".detail-panel p:not(.eyebrow)");
+  if (intro) {
+    intro.textContent = labels.intro;
+  }
+
+  const footerCopy = document.querySelector(".site-footer p");
+  if (footerCopy) {
+    footerCopy.textContent = labels.footer;
+  }
+
+  const footerLink = document.querySelector(".site-footer a");
+  if (footerLink) {
+    footerLink.textContent = labels.top;
+  }
+
+  const breadcrumbLabel = document.querySelector(".breadcrumbs span:last-child");
+  if (breadcrumbLabel) {
+    breadcrumbLabel.textContent = labels.profile;
+  }
+
+  const detailNavLinks = document.querySelectorAll(".detail-nav a");
+  if (detailNavLinks[0]) {
+    detailNavLinks[0].textContent = labels.navCompanies;
+    detailNavLinks[0].setAttribute("href", `${homeHref}#companies`);
+  }
+  if (detailNavLinks[1]) {
+    detailNavLinks[1].textContent = labels.navContact;
+    detailNavLinks[1].setAttribute("href", `${homeHref}#contact`);
+  }
+
+  const langSwitch = document.getElementById("langSwitchLabel");
+  if (langSwitch) {
+    langSwitch.textContent = labels.otherLanguage;
+    langSwitch.setAttribute("aria-label", labels.otherLanguageLabel);
+  }
+
+  const detailNav = document.querySelector(".detail-nav");
+  if (detailNav && !document.getElementById("detailMediaLink") && langSwitch) {
+    const mediaLink = document.createElement("a");
+    mediaLink.id = "detailMediaLink";
+    mediaLink.href = mediaHref;
+    mediaLink.textContent = labels.navMedia;
+    detailNav.insertBefore(mediaLink, langSwitch);
+  }
+
+  const actionLinks = document.querySelectorAll(".detail-actions a");
+  if (actionLinks[0]) {
+    actionLinks[0].textContent = labels.contactGroup;
+    actionLinks[0].setAttribute("href", `${homeHref}#contact`);
+  }
+  if (actionLinks[1]) {
+    actionLinks[1].textContent = labels.allCompanies;
+    actionLinks[1].setAttribute("href", `${homeHref}#companies`);
+  }
 
   const meta = document.getElementById("companyMeta");
   const metaItems = [
@@ -457,8 +538,7 @@ function renderCompanyPage() {
   document.getElementById("overviewTitle").textContent = labels.overview;
   document.getElementById("galleryTitle").textContent = labels.gallery;
   document.getElementById("backHomeLabel").textContent = labels.back;
-  document.getElementById("langSwitchLabel").textContent = labels.otherLanguage;
-  document.getElementById("langSwitchLabel").setAttribute("aria-label", labels.otherLanguageLabel);
+  document.getElementById("backHomeLabel").setAttribute("href", `${homeHref}#companies`);
 
   const copy = document.getElementById("companyCopy");
   copy.innerHTML = company.paragraphs.map((text) => `<p>${text}</p>`).join("");

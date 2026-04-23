@@ -604,6 +604,69 @@ h2 {
   min-height: auto;
 }
 
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.38rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(137, 214, 255, 0.1);
+  color: var(--accent);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.media-summary {
+  color: var(--muted);
+}
+
+.media-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.media-copy p {
+  color: var(--muted);
+}
+
+.media-feed-grid {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.media-card,
+.media-empty {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+.media-empty {
+  grid-column: 1 / -1;
+  background: linear-gradient(145deg, rgba(17, 46, 78, 0.78), rgba(12, 35, 60, 0.56));
+}
+
+.media-card h3,
+.media-empty h3 {
+  margin-bottom: 0.45rem;
+  font-size: 1.05rem;
+}
+
+.media-card p,
+.media-empty p {
+  color: var(--muted);
+}
+
+.media-card a {
+  margin-top: 0.8rem;
+}
+
 .detail-nav {
   position: static;
   opacity: 1;
@@ -774,6 +837,11 @@ textarea::placeholder {
   text-align: right;
 }
 
+[dir="rtl"] .media-card,
+[dir="rtl"] .media-empty {
+  text-align: right;
+}
+
 [dir="rtl"] .nav-dropdown-menu {
   right: auto;
   left: 0;
@@ -796,7 +864,8 @@ textarea::placeholder {
 
   .companies-grid,
   .board-grid,
-  .stats {
+  .stats,
+  .media-feed-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -887,7 +956,8 @@ textarea::placeholder {
   .companies-grid,
   .board-grid,
   .stats,
-  .sectors-grid {
+  .sectors-grid,
+  .media-feed-grid {
     grid-template-columns: 1fr;
   }
 

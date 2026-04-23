@@ -120,13 +120,18 @@ a {
   display: inline-flex;
   align-items: center;
   min-height: 70px;
+  padding: 0.45rem 0.9rem;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(230, 242, 255, 0.94), rgba(255, 255, 255, 0.88));
+  border: 1px solid rgba(185, 216, 247, 0.9);
+  box-shadow: 0 8px 22px rgba(6, 20, 33, 0.32);
 }
 
 .brand-logo {
-  width: clamp(180px, 20vw, 300px);
+  width: clamp(210px, 24vw, 360px);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 18px rgba(30, 73, 125, 0.3));
+  filter: drop-shadow(0 0 10px rgba(30, 73, 125, 0.18));
 }
 
 .site-nav {
@@ -262,6 +267,15 @@ h1 span {
   margin-bottom: 0.8rem;
 }
 
+.hero-banner {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 0.9rem;
+}
+
 .hero-card ul {
   margin: 0;
   padding-left: 1.1rem;
@@ -335,6 +349,27 @@ h2 {
 .card p {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.card-media {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 0.7rem;
+}
+
+.board-photo {
+  object-position: top;
+}
+
+.company-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.22rem;
 }
 
 .timeline {
@@ -486,6 +521,11 @@ textarea::placeholder {
   padding-right: 1.1rem;
 }
 
+[dir="rtl"] .company-list {
+  padding-left: 0;
+  padding-right: 1.2rem;
+}
+
 @media (max-width: 1120px) {
   .sectors-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -524,7 +564,7 @@ textarea::placeholder {
   }
 
   .brand-logo {
-    width: clamp(150px, 34vw, 240px);
+    width: clamp(170px, 42vw, 270px);
   }
 
   .site-nav.is-open {

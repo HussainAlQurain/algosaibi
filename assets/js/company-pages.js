@@ -37,6 +37,7 @@ const COMPANY_DATA = {
       ownership: "50%",
       industry: "Renewable Energy",
       locations: "Eastern Arabia",
+      logo: "solar-arabia-logo.png",
       image: "solar-arabia_2026-04-23_08_52_31.840528.webp",
       gallery: [
         "solar-arabia_2026-04-23_08_52_31.840528.webp",
@@ -53,6 +54,7 @@ const COMPANY_DATA = {
       industry: "Power",
       subIndustry: "Labor and Contracting",
       locations: "Dammam Industrial City",
+      logo: "tecmo-logo.png",
       image: "tecmo-arabia-company.webp",
       gallery: [
         "tecmo-arabia-company.webp",
@@ -70,6 +72,7 @@ const COMPANY_DATA = {
       industry: "Manufacturing",
       subIndustry: "Aluminium Cans",
       locations: "Dammam, Jeddah",
+      logo: "crown-logo.jpeg",
       image: "Crown-company-1_2026-04-23_08_52_28.136587.webp",
       gallery: [
         "Crown-company-1_2026-04-23_08_52_28.136587.webp",
@@ -120,6 +123,7 @@ const COMPANY_DATA = {
       ownership: "30%",
       industry: "Manufacturing",
       locations: "Eastern Arabia",
+      logo: "jotun-logo.png",
       image: "jotun-company-1_2026-04-23_08_52_30.405357.webp",
       gallery: [
         "jotun-company-1_2026-04-23_08_52_30.405357.webp",
@@ -136,6 +140,7 @@ const COMPANY_DATA = {
       industry: "Manufacturing",
       subIndustry: "Pipe Coating",
       locations: "Al Khobar, Jubail",
+      logo: "arabian-pipecoating-logo.jpeg",
       image: "apco_2026-04-23_08_52_27.538545.webp",
       gallery: [
         "apco_2026-04-23_08_52_27.538545.webp",
@@ -153,6 +158,7 @@ const COMPANY_DATA = {
       industry: "Tourism, Hospitality and Leisure",
       subIndustry: "Hotels",
       locations: "Al Khobar",
+      logo: "gosaibi-hotel-logo.png",
       image: "algosaibi-hotel-hospitality_2026-04-23_08_52_27.334175.webp",
       gallery: [
         "algosaibi-hotel-hospitality_2026-04-23_08_52_27.334175.webp",
@@ -169,6 +175,7 @@ const COMPANY_DATA = {
       industry: "Transport",
       subIndustry: "Freight",
       locations: "Dammam",
+      logo: "iacc-logo.png",
       image: "IACC-company-1_2026-04-23_08_52_30.081187.webp",
       gallery: [
         "IACC-company-1_2026-04-23_08_52_30.081187.webp",
@@ -179,12 +186,130 @@ const COMPANY_DATA = {
         "The Company provides services from document handling through freight clearance, performed by IACC's own licensed customs brokers."
       ]
     },
+    "algosaibi-sport-center": {
+      name: "AlGosaibi Sport Center",
+      category: "Hospitality & Recreation",
+      industry: "Sports & Recreation",
+      locations: "Al Khobar",
+      logo: "sport-center-logo.png",
+      image: "sports-center.jpg",
+      gallery: ["sports-center.jpg"],
+      paragraphs: [
+        "AlGosaibi Sport Center is a premier sports and fitness facility offering a wide range of recreational and athletic services to the community of the Eastern Province.",
+        "Part of the A.H. Al-Gosaibi & Bros. Group, the center reflects the group's commitment to community well-being and lifestyle enrichment."
+      ]
+    },
+    "club-8": {
+      name: "Club 8",
+      category: "Hospitality & Recreation",
+      industry: "Sports & Recreation",
+      locations: "Eastern Province, Saudi Arabia",
+      logo: "club8-logo.jpg",
+      image: "club8.jpg",
+      gallery: ["club8.jpg"],
+      paragraphs: [
+        "Club 8 is a sports and social club under the A.H. Al-Gosaibi & Bros. Group, offering diverse recreational activities and membership-based services.",
+        "The club serves members and guests with premium facilities designed to promote an active and healthy lifestyle."
+      ]
+    },
+    "tayyah-industrial": {
+      name: "Tayyah Industrial Company",
+      category: "Manufacturing & Industrial",
+      industry: "Manufacturing",
+      locations: "Eastern Province, Saudi Arabia",
+      logo: "tayyah-logo.png",
+      image: "tayyah.webp",
+      gallery: ["tayyah.webp"],
+      paragraphs: [
+        "Tayyah Industrial Company (شركة طية للصناعة) is a manufacturing subsidiary of the A.H. Al-Gosaibi & Bros. Group, focused on industrial production and related services.",
+        "The company leverages the group's extensive industrial expertise and infrastructure to deliver quality products to the Saudi market."
+      ]
+    },
+    "yata-travel": {
+      name: "Yata Travel (AlGosaibi Travel & Tourism)",
+      category: "Travel & Tourism",
+      industry: "Travel & Tourism",
+      locations: "Eastern Province, Saudi Arabia",
+      logo: "yata-logo.jpeg",
+      image: "yata.png",
+      gallery: ["yata.png"],
+      paragraphs: [
+        "Yata Travel (شركة القصيبي للسفر والسياحة) provides comprehensive travel and tourism services, including ticketing, hotel bookings, tour packages, and corporate travel management.",
+        "With decades of experience, the company is a trusted partner for travel needs across the Eastern Province and beyond."
+      ]
+    },
+    "mathaqat-foods": {
+      name: "Mathaqat Foods Co.",
+      category: "Food & Catering",
+      industry: "Food & Beverage",
+      locations: "Eastern Province, Saudi Arabia",
+      logo: "mathaqat-logo.png",
+      image: "mathaqat.jpg",
+      gallery: ["mathaqat.jpg"],
+      paragraphs: [
+        "Mathaqat Foods Co. (شركة مذاقات للمواد الغذائية) is a food company operating under the A.H. Al-Gosaibi & Bros. Group, specializing in the supply and distribution of food products.",
+        "The company is committed to delivering high-quality food products to consumers and businesses throughout the Kingdom."
+      ]
+    },
+    "qaf-catering": {
+      name: "Qaf Catering Services",
+      category: "Food & Catering",
+      industry: "Catering Services",
+      locations: "Eastern Province, Saudi Arabia",
+      image: "qaf.jpg",
+      logo: "qaf-logo.jpeg",
+      gallery: ["qaf.jpg"],
+      paragraphs: [
+        "Qaf Catering Services (شركة قاف لتقديم الوجبات) provides professional catering and meal services for events, corporate clients, and institutional facilities.",
+        "The company combines quality ingredients with reliable service to deliver outstanding catering experiences."
+      ]
+    },
+    "al-gosaibi-village": {
+      name: "Al Gosaibi Village",
+      category: "Hospitality & Recreation",
+      industry: "Real Estate & Hospitality",
+      locations: "Eastern Province, Saudi Arabia",
+      logo: "algosaibi-village-logo.png",
+      image: "algosaibi-village.jpg",
+      gallery: ["algosaibi-village.jpg"],
+      paragraphs: [
+        "Al Gosaibi Village (قرية القصيبي) is a premium residential and hospitality destination operated under the A.H. Al-Gosaibi & Bros. Group.",
+        "The village offers a curated living and leisure environment that reflects the group's heritage and commitment to quality."
+      ]
+    },
+    "hal-media": {
+      name: "Hal Media (Hal AlSharq)",
+      category: "Media & Communications",
+      industry: "Media",
+      locations: "Eastern Province, Saudi Arabia",
+      logo: "hal-media-logo.jpeg",
+      image: "halmedia.webp",
+      gallery: ["halmedia.webp"],
+      paragraphs: [
+        "Hal Media (هال الشرق) is the media and communications arm of the A.H. Al-Gosaibi & Bros. Group, delivering content and communications services across the Eastern Province.",
+        "The company specializes in media production, events coverage, and communications solutions for corporate and government clients."
+      ]
+    },
+    "fal-alsharq": {
+      name: "Fal AlSharq",
+      category: "Media & Communications",
+      industry: "Media & Services",
+      locations: "Eastern Province, Saudi Arabia",
+      image: "main-company-banner_2026-04-23_08_52_30.588511.webp",
+      logo: "fal-alsharq-logo.png",
+      gallery: ["main-company-banner_2026-04-23_08_52_30.588511.webp"],
+      paragraphs: [
+        "Fal AlSharq (شركة فال الشرق) operates as a services and media company under the A.H. Al-Gosaibi & Bros. Group umbrella.",
+        "The company provides specialized services to businesses and institutions across the Eastern Province of Saudi Arabia."
+      ]
+    },
     "gac-saudi-arabia": {
       name: "GAC Saudi Arabia",
       category: "Transport",
       industry: "Transport",
       subIndustry: "Shipping and Logistics",
       locations: "Dammam, Ras Tanurah, Jebel Ali",
+      logo: "gac-logo.png",
       image: "gac-company-1_2026-04-23_08_52_29.129655.webp",
       gallery: [
         "gac-company-1_2026-04-23_08_52_29.129655.webp",
@@ -237,6 +362,7 @@ const COMPANY_DATA = {
       ownership: "50%",
       industry: "الطاقة المتجددة",
       locations: "المنطقة الشرقية",
+      logo: "solar-arabia-logo.png",
       image: "solar-arabia_2026-04-23_08_52_31.840528.webp",
       gallery: [
         "solar-arabia_2026-04-23_08_52_31.840528.webp",
@@ -253,6 +379,7 @@ const COMPANY_DATA = {
       industry: "الطاقة",
       subIndustry: "الأعمال العمالية والمقاولات",
       locations: "المدينة الصناعية بالدمام",
+      logo: "tecmo-logo.png",
       image: "tecmo-arabia-company.webp",
       gallery: [
         "tecmo-arabia-company.webp",
@@ -270,6 +397,7 @@ const COMPANY_DATA = {
       industry: "التصنيع",
       subIndustry: "علب الألمنيوم",
       locations: "الدمام، جدة",
+      logo: "crown-logo.jpeg",
       image: "Crown-company-1_2026-04-23_08_52_28.136587.webp",
       gallery: [
         "Crown-company-1_2026-04-23_08_52_28.136587.webp",
@@ -320,6 +448,7 @@ const COMPANY_DATA = {
       ownership: "30%",
       industry: "التصنيع",
       locations: "المنطقة الشرقية",
+      logo: "jotun-logo.png",
       image: "jotun-company-1_2026-04-23_08_52_30.405357.webp",
       gallery: [
         "jotun-company-1_2026-04-23_08_52_30.405357.webp",
@@ -336,6 +465,7 @@ const COMPANY_DATA = {
       industry: "التصنيع",
       subIndustry: "طلاء الأنابيب",
       locations: "الخبر، الجبيل",
+      logo: "arabian-pipecoating-logo.jpeg",
       image: "apco_2026-04-23_08_52_27.538545.webp",
       gallery: [
         "apco_2026-04-23_08_52_27.538545.webp",
@@ -352,6 +482,7 @@ const COMPANY_DATA = {
       industry: "السياحة والضيافة والترفيه",
       subIndustry: "الفنادق",
       locations: "الخبر",
+      logo: "gosaibi-hotel-logo.png",
       image: "algosaibi-hotel-hospitality_2026-04-23_08_52_27.334175.webp",
       gallery: [
         "algosaibi-hotel-hospitality_2026-04-23_08_52_27.334175.webp",
@@ -368,6 +499,7 @@ const COMPANY_DATA = {
       industry: "النقل",
       subIndustry: "الشحن",
       locations: "الدمام",
+      logo: "iacc-logo.png",
       image: "IACC-company-1_2026-04-23_08_52_30.081187.webp",
       gallery: [
         "IACC-company-1_2026-04-23_08_52_30.081187.webp",
@@ -378,12 +510,130 @@ const COMPANY_DATA = {
         "وتغطي الشركة الخدمات من معالجة المستندات وحتى التخليص الأمامي، من خلال مخلصيها الجمركيين المرخصين."
       ]
     },
+    "algosaibi-sport-center": {
+      name: "مركز القصيبي الرياضي",
+      category: "الضيافة والترفيه",
+      industry: "الرياضة والترفيه",
+      locations: "الخبر",
+      logo: "sport-center-logo.png",
+      image: "sports-center.jpg",
+      gallery: ["sports-center.jpg"],
+      paragraphs: [
+        "مركز القصيبي الرياضي منشأة رياضية وترفيهية متكاملة تقدم مجموعة واسعة من الخدمات الرياضية والترفيهية لأبناء المنطقة الشرقية.",
+        "يعكس المركز التزام مجموعة أحمد حمد القصيبي وإخوانه بالمسؤولية المجتمعية والاهتمام بجودة الحياة."
+      ]
+    },
+    "club-8": {
+      name: "شركة كلوب ثمانية الرياضي",
+      category: "الضيافة والترفيه",
+      industry: "الرياضة والترفيه",
+      locations: "المنطقة الشرقية، المملكة العربية السعودية",
+      logo: "club8-logo.jpg",
+      image: "club8.jpg",
+      gallery: ["club8.jpg"],
+      paragraphs: [
+        "كلوب ثمانية نادٍ رياضي واجتماعي يعمل تحت مظلة مجموعة أحمد حمد القصيبي وإخوانه، يوفر أنشطة ترفيهية متنوعة وخدمات العضوية المتميزة.",
+        "يخدم النادي أعضاءه وضيوفه بمرافق راقية تعزز أسلوب الحياة الصحي والنشط."
+      ]
+    },
+    "tayyah-industrial": {
+      name: "شركة طية للصناعة",
+      category: "الصناعة والتصنيع",
+      industry: "التصنيع",
+      locations: "المنطقة الشرقية، المملكة العربية السعودية",
+      logo: "tayyah-logo.png",
+      image: "tayyah.webp",
+      gallery: ["tayyah.webp"],
+      paragraphs: [
+        "شركة طية للصناعة شركة صناعية تابعة لمجموعة أحمد حمد القصيبي وإخوانه، تعمل في مجال الإنتاج الصناعي والخدمات المرتبطة به.",
+        "تستفيد الشركة من الخبرة الصناعية الواسعة للمجموعة وبنيتها التحتية لتقديم منتجات عالية الجودة للسوق السعودي."
+      ]
+    },
+    "yata-travel": {
+      name: "شركة القصيبي للسفر والسياحة (ياتا)",
+      category: "السفر والسياحة",
+      industry: "السفر والسياحة",
+      locations: "المنطقة الشرقية، المملكة العربية السعودية",
+      logo: "yata-logo.jpeg",
+      image: "yata.png",
+      gallery: ["yata.png"],
+      paragraphs: [
+        "تقدم شركة القصيبي للسفر والسياحة خدمات سفر شاملة تشمل حجز التذاكر والفنادق والباقات السياحية وإدارة سفر الشركات.",
+        "بخبرة ممتدة لعقود، أصبحت الشركة شريكاً موثوقاً لتلبية احتياجات السفر في المنطقة الشرقية وما وراءها."
+      ]
+    },
+    "mathaqat-foods": {
+      name: "شركة مذاقات للمواد الغذائية",
+      category: "الأغذية والتموين",
+      industry: "الأغذية والمشروبات",
+      locations: "المنطقة الشرقية، المملكة العربية السعودية",
+      logo: "mathaqat-logo.png",
+      image: "mathaqat.jpg",
+      gallery: ["mathaqat.jpg"],
+      paragraphs: [
+        "شركة مذاقات للمواد الغذائية شركة غذائية تعمل تحت مظلة مجموعة أحمد حمد القصيبي وإخوانه، متخصصة في توريد وتوزيع المواد الغذائية.",
+        "تلتزم الشركة بتقديم منتجات غذائية عالية الجودة للمستهلكين والشركات في جميع أنحاء المملكة."
+      ]
+    },
+    "qaf-catering": {
+      name: "شركة قاف لتقديم الوجبات",
+      category: "الأغذية والتموين",
+      industry: "خدمات التموين",
+      locations: "المنطقة الشرقية، المملكة العربية السعودية",
+      image: "qaf.jpg",
+      logo: "qaf-logo.jpeg",
+      gallery: ["qaf.jpg"],
+      paragraphs: [
+        "شركة قاف لتقديم الوجبات تقدم خدمات تموين احترافية للفعاليات والشركات والمرافق المؤسسية.",
+        "تجمع الشركة بين المكونات عالية الجودة والخدمة الموثوقة لتوفير تجارب تموين استثنائية."
+      ]
+    },
+    "al-gosaibi-village": {
+      name: "قرية القصيبي",
+      category: "الضيافة والترفيه",
+      industry: "العقارات والضيافة",
+      locations: "المنطقة الشرقية، المملكة العربية السعودية",
+      logo: "algosaibi-village-logo.png",
+      image: "algosaibi-village.jpg",
+      gallery: ["algosaibi-village.jpg"],
+      paragraphs: [
+        "قرية القصيبي وجهة سكنية وترفيهية راقية تديرها مجموعة أحمد حمد القصيبي وإخوانه.",
+        "تقدم القرية بيئة معيشية وترفيهية مميزة تعكس إرث المجموعة والتزامها بالجودة."
+      ]
+    },
+    "hal-media": {
+      name: "هال الشرق",
+      category: "الإعلام والاتصالات",
+      industry: "الإعلام",
+      locations: "المنطقة الشرقية، المملكة العربية السعودية",
+      logo: "hal-media-logo.jpeg",
+      image: "halmedia.webp",
+      gallery: ["halmedia.webp"],
+      paragraphs: [
+        "هال الشرق هي الذراع الإعلامية والاتصالية لمجموعة أحمد حمد القصيبي وإخوانه، تقدم محتوى وخدمات اتصال في المنطقة الشرقية.",
+        "تتخصص الشركة في الإنتاج الإعلامي وتغطية الفعاليات وحلول الاتصال للعملاء من الشركات والجهات الحكومية."
+      ]
+    },
+    "fal-alsharq": {
+      name: "فال الشرق",
+      category: "الإعلام والاتصالات",
+      industry: "الإعلام والخدمات",
+      locations: "المنطقة الشرقية، المملكة العربية السعودية",
+      image: "main-company-banner_2026-04-23_08_52_30.588511.webp",
+      logo: "fal-alsharq-logo.png",
+      gallery: ["main-company-banner_2026-04-23_08_52_30.588511.webp"],
+      paragraphs: [
+        "فال الشرق شركة خدمات وإعلام تعمل تحت مظلة مجموعة أحمد حمد القصيبي وإخوانه.",
+        "تقدم الشركة خدمات متخصصة للشركات والمؤسسات في المنطقة الشرقية من المملكة العربية السعودية."
+      ]
+    },
     "gac-saudi-arabia": {
       name: "GAC Saudi Arabia",
       category: "النقل",
       industry: "النقل",
       subIndustry: "الشحن والخدمات اللوجستية",
       locations: "الدمام، رأس تنورة، جبل علي",
+      logo: "gac-logo.png",
       image: "gac-company-1_2026-04-23_08_52_29.129655.webp",
       gallery: [
         "gac-company-1_2026-04-23_08_52_29.129655.webp",
@@ -518,6 +768,19 @@ function renderCompanyPage() {
   if (actionLinks[1]) {
     actionLinks[1].textContent = labels.allCompanies;
     actionLinks[1].setAttribute("href", `${homeHref}#companies`);
+  }
+
+  // Logo
+  const sidebar = document.querySelector(".detail-sidebar");
+  const existingLogo = document.getElementById("companyLogoImg");
+  if (existingLogo) existingLogo.remove();
+  if (company.logo && sidebar) {
+    const logoEl = document.createElement("img");
+    logoEl.id = "companyLogoImg";
+    logoEl.src = `${base}assets/images/${company.logo}`;
+    logoEl.alt = `${company.name} logo`;
+    logoEl.className = "detail-logo";
+    sidebar.insertBefore(logoEl, sidebar.firstChild);
   }
 
   const meta = document.getElementById("companyMeta");

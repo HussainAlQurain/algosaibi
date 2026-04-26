@@ -49,3 +49,18 @@ document.querySelectorAll('a[href="#top"]').forEach((anchor) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+// Sector accordion hover effect
+const sectorContainer = document.getElementById("sectorsContainer");
+if (sectorContainer) {
+  sectorContainer.addEventListener("mouseover", (e) => {
+    if (e.target.closest(".sector-item")) {
+      sectorContainer.classList.add("hovering");
+    }
+  });
+  sectorContainer.addEventListener("mouseout", (e) => {
+    if (!e.relatedTarget || !e.relatedTarget.closest(".sector-item")) {
+      sectorContainer.classList.remove("hovering");
+    }
+  });
+}

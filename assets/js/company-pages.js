@@ -749,6 +749,10 @@ function renderCompanyPage() {
   if (langSwitch) {
     langSwitch.textContent = labels.otherLanguage;
     langSwitch.setAttribute("aria-label", labels.otherLanguageLabel);
+    const otherLangHref = lang === "en"
+      ? `${base}ar/companies/${slug}.html`
+      : `${base}companies/${slug}.html`;
+    langSwitch.setAttribute("href", otherLangHref);
   }
 
   const detailNav = document.querySelector(".detail-nav");

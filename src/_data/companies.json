@@ -1,0 +1,208 @@
+{
+  "sectors": [
+    {
+      "en": "Hospitality & Recreation",
+      "ar": "الضيافة والترفيه",
+      "companies": [
+        {
+          "en": "AlGosaibi Hotel",
+          "ar": "فندق القصيبي",
+          "logo": "assets/images/gosaibi-hotel-logo.png",
+          "url": "https://algosaibihotel.com/",
+          "description": "Premium hospitality in the Eastern Province",
+          "descriptionAr": "ضيافة راقية في المنطقة الشرقية"
+        },
+        {
+          "en": "AlGosaibi Sport Center",
+          "ar": "مركز القصيبي الرياضي",
+          "logo": "assets/images/sport-center-logo.png",
+          "url": "https://algosaibisports.com/",
+          "description": "World-class sports & recreation facilities",
+          "descriptionAr": "مرافق رياضية وترفيهية عالمية المستوى"
+        },
+        {
+          "en": "Club 8",
+          "ar": "كلوب ثمانية",
+          "logo": "assets/images/club8-logo.jpg",
+          "url": "https://club8sa.com/",
+          "description": "Entertainment & social destination",
+          "descriptionAr": "وجهة ترفيهية واجتماعية"
+        },
+        {
+          "en": "Al Gosaibi Village",
+          "ar": "قرية القصيبي",
+          "logo": "assets/images/algosaibi-village-logo.png",
+          "url": "https://algosaibivillage.com/en-US/",
+          "description": "Family entertainment destination",
+          "descriptionAr": "وجهة ترفيهية عائلية"
+        }
+      ]
+    },
+    {
+      "en": "Food & Catering",
+      "ar": "الأغذية والتموين",
+      "companies": [
+        {
+          "en": "Mathaqat Foods Co.",
+          "ar": "شركة مذاقات للمواد الغذائية",
+          "logo": "assets/images/mathaqat-logo.png",
+          "url": "https://mathaqat.com.sa/",
+          "description": "Quality food manufacturing & distribution",
+          "descriptionAr": "تصنيع وتوزيع المواد الغذائية"
+        },
+        {
+          "en": "Qaf Catering Services",
+          "ar": "شركة قاف لتقديم الوجبات",
+          "logo": "assets/images/qaf-logo.jpg",
+          "url": "https://qafcatering.com/",
+          "description": "Professional catering & food services",
+          "descriptionAr": "خدمات تقديم الوجبات الاحترافية"
+        },
+        {
+          "en": "Gosaibi Foods",
+          "ar": "أغذية القصيبي",
+          "logo": null,
+          "url": null,
+          "description": "Food & consumer products",
+          "descriptionAr": "المنتجات الغذائية والاستهلاكية"
+        }
+      ]
+    },
+    {
+      "en": "Manufacturing & Industrial",
+      "ar": "الصناعة والتصنيع",
+      "companies": [
+        {
+          "en": "Tayyah Industrial",
+          "ar": "شركة طية للصناعة",
+          "logo": "assets/images/tayyah-logo.png",
+          "url": "https://tayyah.com/about-us/",
+          "description": "Industrial manufacturing & contracting",
+          "descriptionAr": "التصنيع الصناعي والمقاولات"
+        },
+        {
+          "en": "Arabian Pipecoating (APCO)",
+          "ar": "الشركة العربية لطلاء الأنابيب",
+          "logo": "assets/images/arabian-pipecoating-logo.jpeg",
+          "url": "https://www.apco-coating.com/",
+          "description": "Pipe coating & corrosion protection",
+          "descriptionAr": "طلاء الأنابيب والحماية من التآكل"
+        },
+        {
+          "en": "Crown Arabia",
+          "ar": "Crown Arabia",
+          "logo": "assets/images/crown-logo.jpeg",
+          "url": "https://www.crowncork.com/",
+          "description": "Packaging solutions",
+          "descriptionAr": "حلول التغليف"
+        },
+        {
+          "en": "Jotun Powder Coatings",
+          "ar": "Jotun Powder Coatings",
+          "logo": "assets/images/jotun-logo.png",
+          "url": "https://www.jotun.com/",
+          "description": "Premium paint & powder coatings",
+          "descriptionAr": "الدهانات ومساحيق الطلاء"
+        },
+        {
+          "en": "Eastern Insulation Company",
+          "ar": "شركة الشرق للعزل",
+          "logo": null,
+          "url": null,
+          "description": "Industrial insulation solutions",
+          "descriptionAr": "حلول العزل الصناعي"
+        },
+        {
+          "en": "National Factory for Can Ends",
+          "ar": "المصنع الوطني لأغطية العلب",
+          "logo": null,
+          "url": null,
+          "description": "Metal packaging manufacturing",
+          "descriptionAr": "تصنيع عبوات التعليب المعدنية"
+        },
+        {
+          "en": "Raymond Saudi Arabia Ltd.",
+          "ar": "ريموند المملكة العربية السعودية",
+          "logo": null,
+          "url": null,
+          "description": "Textiles & apparel",
+          "descriptionAr": "المنسوجات والملابس"
+        }
+      ]
+    },
+    {
+      "en": "Energy & Power",
+      "ar": "الطاقة والكهرباء",
+      "companies": [
+        {
+          "en": "Solar Arabia",
+          "ar": "Solar Arabia",
+          "logo": "assets/images/solar-arabia-logo.png",
+          "url": "http://www.solararabialtd.com/",
+          "description": "Solar energy & renewable solutions",
+          "descriptionAr": "الطاقة الشمسية والحلول المتجددة"
+        },
+        {
+          "en": "Tecmo Arabia Ltd",
+          "ar": "Tecmo Arabia Ltd",
+          "logo": "assets/images/tecmo-logo.png",
+          "url": "https://www.tecmoarabia.com",
+          "description": "Power generation & electrical engineering",
+          "descriptionAr": "توليد الطاقة والهندسة الكهربائية"
+        }
+      ]
+    },
+    {
+      "en": "Transport & Logistics",
+      "ar": "النقل والخدمات اللوجستية",
+      "companies": [
+        {
+          "en": "IACC",
+          "ar": "IACC",
+          "logo": "assets/images/iacc-logo.png",
+          "url": "http://www.iaccsaudi.com",
+          "description": "International air cargo & freight",
+          "descriptionAr": "الشحن الجوي الدولي والبضائع"
+        },
+        {
+          "en": "GAC Saudi Arabia",
+          "ar": "GAC Saudi Arabia",
+          "logo": "assets/images/gac-logo.png",
+          "url": "https://www.gac.com/saudi-arabia",
+          "description": "Shipping, logistics & marine services",
+          "descriptionAr": "الشحن والخدمات اللوجستية والبحرية"
+        }
+      ]
+    },
+    {
+      "en": "Media & Travel",
+      "ar": "الإعلام والسفر",
+      "companies": [
+        {
+          "en": "Hal Media",
+          "ar": "هال ميديا",
+          "logo": "assets/images/hal-media-logo.jpeg",
+          "url": "https://www.halmediaco.com/en",
+          "description": "Media production & communications",
+          "descriptionAr": "الإنتاج الإعلامي والاتصالات"
+        },
+        {
+          "en": "Fal AlSharq",
+          "ar": "فال الشرق",
+          "logo": "assets/images/fal-alsharq-logo.png",
+          "url": null,
+          "description": "Regional media & publishing",
+          "descriptionAr": "الإعلام والنشر الإقليمي"
+        },
+        {
+          "en": "Yata Travel",
+          "ar": "يتا للسفر والسياحة",
+          "logo": "assets/images/yata-logo.jpeg",
+          "url": "https://www.yatatravel.com",
+          "description": "Travel, tourism & hospitality services",
+          "descriptionAr": "خدمات السفر والسياحة والضيافة"
+        }
+      ]
+    }
+  ]
+}

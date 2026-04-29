@@ -1,0 +1,12 @@
+{
+  "name": "ahalgosaibi-website",
+  "version": "1.0.0",
+  "description": "AHALGOSAIBI Group Corporate Website",
+  "scripts": {
+    "build": "eleventy && node scripts/copy-to-root.js",
+    "start": "eleventy --serve --quiet"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

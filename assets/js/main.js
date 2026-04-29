@@ -213,3 +213,40 @@ const counterObserver = new IntersectionObserver(
 document.querySelectorAll(".counter-num[data-target]").forEach((el) => {
   counterObserver.observe(el);
 });
+
+/* ── News track drag/scroll + progress bar ─────────────────── */
+(function () {
+  const track = document.getElementById("newsTrack");
+  const bar = document.getElementById("newsTrackBar");
+  if (!track) return;
+
+  function updateBar() {
+    if (!bar) return;
+    const max = track.scrollWidth - track.clientWidth;
+    const pct = max > 0 ? (track.scrollLeft / max) * 100 : 0;
+    bar.style.width = Math.max(10, pct) + "%";
+  }
+
+  track.addEventListener("scroll", updateBar, { passive: true });
+  updateBar();
+
+  // drag-to-scroll
+  let isDragging = false, startX = 0, startScrollLeft = 0;
+
+  track.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX - track.offsetLeft;
+    startScrollLeft = track.scrollLeft;
+    track.style.cursor = "grabbing";
+  });
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    track.scrollLeft = startScrollLeft - (x - startX);
+  });
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+    if (track) track.style.cursor = "grab";
+  });
+})();

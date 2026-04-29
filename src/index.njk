@@ -1,82 +1,12 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ahmad Hamad ALGOSAIBI and BROS CO. A legacy Saudi business group with diversified operations across manufacturing, energy, hospitality, transport and more." />
-    <title>Ahmad Hamad ALGOSAIBI &amp; BROS CO. | AHALGOSAIBI Group</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <header class="site-header" id="top">
-      <div class="container nav-wrap">
-        <a href="index.html" class="brand" aria-label="AHALGOSAIBI home">
-          <img src="assets/images/logo.png" alt="AHALGOSAIBI Group logo" class="brand-logo" />
-        </a>
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="site-nav" id="navMenu">
-          <a href="index.html" class="lang-link is-active">EN</a>
-          <a href="ar/index.html" class="lang-link" id="langSwitchLabel">AR</a>
-          <a href="about.html" >About Us</a>
-          <a href="values.html" >Values</a>
-          <a href="history.html" >History</a>
-          <div class="nav-dropdown">
-            <a href="companies.html" class="nav-dropdown-toggle" >Companies</a>
-            <div class="nav-dropdown-menu">
-              <div class="nav-dropdown-section nav-dropdown-all">
-                <a href="companies.html" class="nav-all-link">View All Companies &rarr;</a>
-              </div>
-              <div class="nav-dropdown-section">
-                <span class="nav-dropdown-label">Hospitality &amp; Recreation</span>
-                <a href="https://algosaibihotel.com/" target="_blank" rel="noopener">AlGosaibi Hotel</a>
-                <a href="https://algosaibisports.com/" target="_blank" rel="noopener">AlGosaibi Sport Center</a>
-                <a href="https://club8sa.com/" target="_blank" rel="noopener">Club 8</a>
-                <a href="https://algosaibivillage.com/en-US/" target="_blank" rel="noopener">Al Gosaibi Village</a>
-              </div>
-              <div class="nav-dropdown-section">
-                <span class="nav-dropdown-label">Food &amp; Catering</span>
-                <a href="https://mathaqat.com.sa/" target="_blank" rel="noopener">Mathaqat Foods Co.</a>
-                <a href="https://qafcatering.com/" target="_blank" rel="noopener">Qaf Catering Services</a>
-              </div>
-              <div class="nav-dropdown-section">
-                <span class="nav-dropdown-label">Manufacturing &amp; Industrial</span>
-                <a href="https://tayyah.com/about-us/" target="_blank" rel="noopener">Tayyah Industrial</a>
-                <a href="https://www.apco-coating.com/" target="_blank" rel="noopener">Arabian Pipecoating (APCO)</a>
-                <a href="https://www.crowncork.com/" target="_blank" rel="noopener">Crown Arabia</a>
-                <a href="https://www.jotun.com/" target="_blank" rel="noopener">Jotun Powder Coatings</a>
-              </div>
-              <div class="nav-dropdown-section">
-                <span class="nav-dropdown-label">Energy &amp; Power</span>
-                <a href="http://www.solararabialtd.com/" target="_blank" rel="noopener">Solar Arabia</a>
-                <a href="https://www.tecmoarabia.com" target="_blank" rel="noopener">Tecmo Arabia Ltd</a>
-              </div>
-              <div class="nav-dropdown-section">
-                <span class="nav-dropdown-label">Transport &amp; Logistics</span>
-                <a href="http://www.iaccsaudi.com" target="_blank" rel="noopener">IACC</a>
-                <a href="https://www.gac.com/saudi-arabia" target="_blank" rel="noopener">GAC Saudi Arabia</a>
-              </div>
-              <div class="nav-dropdown-section">
-                <span class="nav-dropdown-label">Media &amp; Travel</span>
-                <a href="https://www.halmediaco.com/en" target="_blank" rel="noopener">Hal Media</a>
-                <a href="https://www.yatatravel.com" target="_blank" rel="noopener">Yata Travel</a>
-              </div>
-            </div>
-          </div>
-          <a href="media-events.html" >Media &amp; Events</a>
-          <a href="index.html#board">Board</a>
-          <a href="careers.html" >Careers</a>
-          <a href="contact.html" class="btn btn-sm btn-gold" >Contact</a>
-        </nav>
-      </div>
-    </header>
+---
+layout: layouts/base.njk
+title: "Ahmad Hamad ALGOSAIBI & BROS CO."
+description: "Ahmad Hamad ALGOSAIBI and BROS CO. A legacy Saudi business group with diversified operations across manufacturing, energy, hospitality, transport and more."
+arLink: "ar/index.html"
+activePage: "home"
+permalink: "index.html"
+---
 
-    <main>
-      
 <!-- ═══════════════════════════════════════════════
      HERO
 ═══════════════════════════════════════════════ -->
@@ -189,35 +119,14 @@
     </div>
     <div class="news-track-wrap">
       <div class="news-track" id="newsTrack">
-        
+        {% for item in news %}
         <article class="news-card reveal">
-          <span class="news-cat">Corporate</span>
-          <h3>Group Hosts Annual Leadership Summit</h3>
-          <p>Senior leadership from across all six sectors gathered for the annual strategic review and planning summit at the group&#39;s headquarters in the Eastern Province.</p>
-          <span class="news-date">March 2026</span>
+          <span class="news-cat">{{ item.category }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.excerpt }}</p>
+          <span class="news-date">{{ item.date }}</span>
         </article>
-        
-        <article class="news-card reveal">
-          <span class="news-cat">Hospitality</span>
-          <h3>AlGosaibi Hotel Wins Regional Excellence Award</h3>
-          <p>AlGosaibi Hotel was recognized for outstanding service quality and guest experience at the 2026 GCC Hospitality Excellence Awards.</p>
-          <span class="news-date">February 2026</span>
-        </article>
-        
-        <article class="news-card reveal">
-          <span class="news-cat">Energy</span>
-          <h3>Solar Arabia Expands Renewable Energy Portfolio</h3>
-          <p>Solar Arabia announces major expansion of solar energy installations across the Eastern Province, supporting Vision 2030 clean energy targets.</p>
-          <span class="news-date">January 2026</span>
-        </article>
-        
-        <article class="news-card reveal">
-          <span class="news-cat">Manufacturing</span>
-          <h3>Tayyah Industrial Signs Strategic Partnership</h3>
-          <p>Tayyah Industrial enters a strategic manufacturing partnership to scale production capacity and enhance technical capabilities across the region.</p>
-          <span class="news-date">December 2025</span>
-        </article>
-        
+        {% endfor %}
       </div>
     </div>
     <div class="news-track-bar-wrap" aria-hidden="true">
@@ -401,60 +310,3 @@
     </div>
   </div>
 </section>
-
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <img src="assets/images/logo.png" alt="AHALGOSAIBI Group" class="footer-brand-logo" />
-            <p class="footer-tagline">A legacy Saudi business group with diversified operations spanning manufacturing, energy, hospitality, transport and consumer business.</p>
-          </div>
-          <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul class="footer-links">
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="values.html">Our Values</a></li>
-              <li><a href="history.html">Our History</a></li>
-              <li><a href="companies.html">Companies</a></li>
-              <li><a href="index.html#board">Board of Directors</a></li>
-              <li><a href="careers.html">Careers</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Companies</h4>
-            <ul class="footer-links">
-              <li><a href="https://algosaibihotel.com/" target="_blank" rel="noopener">AlGosaibi Hotel</a></li>
-              <li><a href="https://algosaibisports.com/" target="_blank" rel="noopener">AlGosaibi Sport Center</a></li>
-              <li><a href="https://club8sa.com/" target="_blank" rel="noopener">Club 8</a></li>
-              <li><a href="https://algosaibivillage.com/en-US/" target="_blank" rel="noopener">Al Gosaibi Village</a></li>
-              <li><a href="https://mathaqat.com.sa/" target="_blank" rel="noopener">Mathaqat Foods</a></li>
-              <li><a href="https://www.gac.com/saudi-arabia" target="_blank" rel="noopener">GAC Saudi Arabia</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Contact</h4>
-            <ul class="footer-contact-list">
-              <li><strong>Phone</strong>+966 13 882 2666</li>
-              <li><strong>Email</strong>info@ahalgosaibi.com</li>
-              <li><strong>Careers</strong>join@ahalgosaibi.com</li>
-              <li><strong>Location</strong>Eastern Province, Kingdom of Saudi Arabia</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container footer-bottom-wrap">
-          <p>&copy; 2026 Ahmad Hamad Al-Gosaibi &amp; Bros. Co. All rights reserved.</p>
-          <div style="display:flex;gap:1.2rem;align-items:center;">
-            <a href="ar/index.html">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a>
-            <a href="#top">Back to top &uarr;</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
-  </body>
-</html>

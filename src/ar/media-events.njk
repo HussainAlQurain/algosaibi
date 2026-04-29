@@ -1,0 +1,39 @@
+---
+layout: layouts/base-ar.njk
+title: "الإعلام والفعاليات"
+description: "آخر أخبار مجموعة أحمد حمد القصيبي وإخوانه — الفعاليات والإعلانات والتغطية الإعلامية."
+enLink: "../media-events.html"
+activePage: "media-events"
+permalink: "ar/media-events.html"
+---
+
+<section class="page-hero">
+  <img src="../assets/images/main-company-banner_2026-04-23_08_52_30.588511.webp" alt="الإعلام والفعاليات" class="hero-bg-img" />
+  <div class="hero-overlay"></div>
+  <div class="hero-container">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">آخر المستجدات</p>
+      <h1>الإعلام <span>والفعاليات</span></h1>
+      <p>الأخبار والإعلانات والتغطية الإعلامية من مجموعة القصيبي.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">أحدث الأخبار</p>
+      <h2>الأخبار والتحديثات</h2>
+    </div>
+    <div class="media-cards-grid reveal delay-1">
+      {% for item in news %}
+      <article class="media-card">
+        <span class="news-cat">{{ item.categoryAr }}</span>
+        <h3>{{ item.titleAr }}</h3>
+        <p>{{ item.excerptAr }}</p>
+        <span class="news-date">{{ item.dateAr }}</span>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -63,7 +63,8 @@ if (sectorContainer && window.innerWidth > 900) {
   sectorContainer.appendChild(track);
 
   // 2. Measure the base width of one full set (must come before cloning)
-  const ITEM_BASE_W = 84; // must match CSS flex: 0 0 84px
+  //    Read from DOM so it stays in sync with any CSS value change.
+  const ITEM_BASE_W = visibleItems[0] ? visibleItems[0].getBoundingClientRect().width : 200;
   const setWidth = visibleItems.length * ITEM_BASE_W;
 
   // 3. Clone enough sets so the track always fills beyond the viewport —

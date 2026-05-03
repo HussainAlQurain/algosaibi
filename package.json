@@ -4,6 +4,7 @@
   "description": "AHALGOSAIBI Group Corporate Website",
   "scripts": {
     "build": "eleventy && node scripts/copy-to-root.js",
+    "deploy": "eleventy && node scripts/make-deploy.js",
     "start": "eleventy --serve --quiet"
   },
   "devDependencies": {

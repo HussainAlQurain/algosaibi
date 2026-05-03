@@ -68,9 +68,8 @@
             </div>
           </div>
           <a href="media-events.html" {% if activePage == 'media' %}aria-current="page" class="nav-active"{% endif %}>الإعلام والفعاليات</a>
-          <a href="index.html#board">المجلس</a>
-          <a href="careers.html" {% if activePage == 'careers' %}aria-current="page" class="nav-active"{% endif %}>الوظائف</a>
-          <a href="contact.html" class="btn btn-sm btn-gold" {% if activePage == 'contact' %}aria-current="page"{% endif %}>اتصل بنا</a>
+          <a href="board.html" {% if activePage == 'board' %}aria-current="page" class="nav-active"{% endif %}>المجلس</a>
+          <a href="contact.html" class="btn btn-sm btn-gold" {% if activePage == 'contact' or activePage == 'careers' %}aria-current="page"{% endif %}>الوظائف والتواصل</a>
         </nav>
       </div>
     </header>
@@ -79,6 +78,7 @@
       {{ content | safe }}
     </main>
 
+    {% if showFooter %}
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -93,7 +93,7 @@
               <li><a href="values.html">قيمنا</a></li>
               <li><a href="history.html">تاريخنا</a></li>
               <li><a href="companies.html">الشركات</a></li>
-              <li><a href="index.html#board">مجلس الإدارة</a></li>
+              <li><a href="board.html">مجلس الإدارة</a></li>
               <li><a href="careers.html">الوظائف</a></li>
             </ul>
           </div>
@@ -129,6 +129,7 @@
         </div>
       </div>
     </footer>
+    {% endif %}
 
     <script src="../assets/js/main.js"></script>
   </body>

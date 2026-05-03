@@ -68,9 +68,8 @@
             </div>
           </div>
           <a href="media-events.html" {% if activePage == 'media' %}aria-current="page" class="nav-active"{% endif %}>Media &amp; Events</a>
-          <a href="index.html#board">Board</a>
-          <a href="careers.html" {% if activePage == 'careers' %}aria-current="page" class="nav-active"{% endif %}>Careers</a>
-          <a href="contact.html" class="btn btn-sm btn-gold" {% if activePage == 'contact' %}aria-current="page"{% endif %}>Contact</a>
+          <a href="board.html" {% if activePage == 'board' %}aria-current="page" class="nav-active"{% endif %}>Board</a>
+          <a href="contact.html" class="btn btn-sm btn-gold" {% if activePage == 'contact' or activePage == 'careers' %}aria-current="page"{% endif %}>Careers &amp; Contact</a>
         </nav>
       </div>
     </header>
@@ -79,6 +78,7 @@
       {{ content | safe }}
     </main>
 
+    {% if showFooter %}
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
@@ -93,7 +93,7 @@
               <li><a href="values.html">Our Values</a></li>
               <li><a href="history.html">Our History</a></li>
               <li><a href="companies.html">Companies</a></li>
-              <li><a href="index.html#board">Board of Directors</a></li>
+              <li><a href="board.html">Board of Directors</a></li>
               <li><a href="careers.html">Careers</a></li>
             </ul>
           </div>
@@ -129,6 +129,7 @@
         </div>
       </div>
     </footer>
+    {% endif %}
 
     <script src="assets/js/main.js"></script>
   </body>

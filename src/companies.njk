@@ -27,10 +27,8 @@ permalink: "companies.html"
       <p style="color:var(--t2);max-width:60ch;margin:1rem auto 0;line-height:1.8;">A diversified portfolio of businesses spanning the Kingdom — each one a legacy of quality, innovation, and commitment to Saudi Arabia's progress.</p>
     </div>
 
-    {% for sector in companies.sectors %}
-    <div class="companies-sector-block reveal">
-      <h3 class="companies-sector-label">{{ sector.en }}</h3>
-      <div class="companies-cards-grid">
+    <div class="companies-cards-grid reveal">
+      {% for sector in companies.sectors %}
         {% for company in sector.companies %}
         {% if company.url %}
         <a href="{{ company.url }}" target="_blank" rel="noopener" class="company-box company-box--link">
@@ -59,9 +57,8 @@ permalink: "companies.html"
         </div>
         {% endif %}
         {% endfor %}
-      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
 
   </div>
 </section>

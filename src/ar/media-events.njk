@@ -1,9 +1,9 @@
 ---
 layout: layouts/base-ar.njk
 title: "الإعلام والفعاليات"
-description: "آخر أخبار مجموعة أحمد حمد القصيبي وإخوانه — الفعاليات والإعلانات والتغطية الإعلامية."
+description: "صفحة الإعلام والإعلانات الرسمية الخاصة بأحمد حمد القصيبي وإخوانه."
 enLink: "../media-events.html"
-activePage: "media-events"
+activePage: "media"
 permalink: "ar/media-events.html"
 ---
 
@@ -12,28 +12,29 @@ permalink: "ar/media-events.html"
   <div class="hero-overlay"></div>
   <div class="hero-container">
     <div class="hero-copy reveal">
-      <p class="eyebrow">آخر المستجدات</p>
-      <h1>الإعلام <span>والفعاليات</span></h1>
-      <p>الأخبار والإعلانات والتغطية الإعلامية من مجموعة القصيبي.</p>
+      <p class="eyebrow">الإعلام والفعاليات</p>
+      <h1>مستجدات <span>المجموعة</span></h1>
+      <p>هذا القسم مخصص للإعلانات الرسمية والتحديثات الإعلامية الخاصة بالمجموعة.</p>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section section-alt">
   <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">أحدث الأخبار</p>
-      <h2>الأخبار والتحديثات</h2>
+    <div class="section-head centered reveal">
+      <p class="eyebrow">معلومات رسمية</p>
+      <h2>الإعلانات والاستفسارات الإعلامية</h2>
     </div>
-    <div class="media-cards-grid reveal delay-1">
-      {% for item in news %}
-      <article class="media-card">
-        <span class="news-cat">{{ item.categoryAr }}</span>
-        <h3>{{ item.titleAr }}</h3>
-        <p>{{ item.excerptAr }}</p>
-        <span class="news-date">{{ item.dateAr }}</span>
-      </article>
-      {% endfor %}
+    <div class="media-split">
+      <div class="media-card reveal">
+        <h3>إعلانات المجموعة</h3>
+        <p>سيتم نشر الإعلانات الموثقة والتحديثات الرسمية الخاصة بأحمد حمد القصيبي وإخوانه هنا.</p>
+        <a class="btn btn-outline-light btn-sm" href="contact.html">تواصل مع المجموعة</a>
+      </div>
+      <div class="media-card reveal delay-1">
+        <h3>الاستفسارات الإعلامية</h3>
+        <p>للاستفسارات الإعلامية أو المؤسسية الحالية، يرجى استخدام صفحة التواصل إلى حين تحديث هذا القسم بمحتوى موثق.</p>
+      </div>
     </div>
   </div>
 </section>

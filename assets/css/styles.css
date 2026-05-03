@@ -465,13 +465,13 @@ h3 { font-size: 1.1rem; font-weight: 600; line-height: 1.4; }
 
 /* ——— MEDIA SECTION ————————————————————————————————————— */
 .media-split { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
-.media-card {
+.media-split .media-card {
   background: var(--bg-dark); border: 1px solid var(--border-d);
   border-radius: var(--r-lg); padding: 2rem; color: var(--t-light);
 }
-.media-card h3 { color: #fff; margin-bottom: .55rem; }
-.media-card p { color: var(--t-pale); font-size: .92rem; }
-.media-card .btn { margin-top: 1.2rem; }
+.media-split .media-card h3 { color: #fff; margin-bottom: .55rem; }
+.media-split .media-card p { color: var(--t-pale); font-size: .92rem; }
+.media-split .media-card .btn { margin-top: 1.2rem; }
 .media-feed-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 1rem; }
 .media-empty {
   grid-column: 1/-1; padding: 3rem 2rem;
@@ -1041,7 +1041,7 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
 }
-.media-card {
+.media-cards-grid .media-card {
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -1051,6 +1051,8 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
   gap: .75rem;
   box-shadow: var(--shadow-s);
 }
+.media-cards-grid .media-card h3 { color: var(--navy); }
+.media-cards-grid .media-card p { color: var(--t2); }
 
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 1200px) {

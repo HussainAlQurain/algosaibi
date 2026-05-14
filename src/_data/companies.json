@@ -59,8 +59,8 @@
           "descriptionAr": "عمليات التموين والخدمات الغذائية"
         },
         {
-          "en": "Gosaibi Foods",
-          "ar": "أغذية القصيبي",
+          "en": "Mathaqat Al Sharq",
+          "ar": "شركة مذاقات الشرق للمقاولات العامة",
           "logo": null,
           "url": null,
           "description": "Food and consumer-business activities",
@@ -82,7 +82,7 @@
         },
         {
           "en": "Arabian Pipecoating (APCO)",
-          "ar": "الشركة العربية لطلاء الأنابيب",
+          "ar": "الشركة العربية لتغليف الأنابيب",
           "logo": "assets/images/arabian-pipecoating-logo.jpeg",
           "url": "https://www.apco-coating.com/",
           "description": "Pipe coating and corrosion-protection services",
@@ -90,7 +90,7 @@
         },
         {
           "en": "Crown Arabia",
-          "ar": "Crown Arabia",
+          "ar": "شركة كراون العربية",
           "logo": "assets/images/crown-logo.jpeg",
           "url": "https://www.crowncork.com/",
           "description": "Aluminium beverage-can manufacturing",
@@ -98,35 +98,11 @@
         },
         {
           "en": "Jotun Powder Coatings",
-          "ar": "Jotun Powder Coatings",
+          "ar": "شركة جوتن باودر كوتنغز العربية السعودية",
           "logo": "assets/images/jotun-logo.png",
           "url": "https://www.jotun.com/",
           "description": "Powder-coating products and services",
           "descriptionAr": "منتجات وخدمات الطلاء بالمساحيق"
-        },
-        {
-          "en": "Eastern Insulation Company",
-          "ar": "شركة الشرق للعزل",
-          "logo": null,
-          "url": null,
-          "description": "Insulation products and industrial solutions",
-          "descriptionAr": "منتجات العزل والحلول الصناعية"
-        },
-        {
-          "en": "National Factory for Can Ends",
-          "ar": "المصنع الوطني لأغطية العلب",
-          "logo": null,
-          "url": null,
-          "description": "Can-end manufacturing",
-          "descriptionAr": "تصنيع أغطية العلب"
-        },
-        {
-          "en": "Raymond Saudi Arabia Ltd.",
-          "ar": "ريموند المملكة العربية السعودية",
-          "logo": null,
-          "url": null,
-          "description": "Pipeline and industrial-project services",
-          "descriptionAr": "خدمات خطوط الأنابيب والمشاريع الصناعية"
         }
       ]
     },
@@ -136,7 +112,7 @@
       "companies": [
         {
           "en": "Solar Arabia",
-          "ar": "Solar Arabia",
+          "ar": "الشركة العربية للطاقة الشمسية",
           "logo": "assets/images/solar-arabia-logo.png",
           "url": "http://www.solararabialtd.com/",
           "description": "Renewable-energy consulting and project development",
@@ -144,7 +120,7 @@
         },
         {
           "en": "Tecmo Arabia Ltd",
-          "ar": "Tecmo Arabia Ltd",
+          "ar": "شركة تكمو العربية",
           "logo": "assets/images/tecmo-logo.png",
           "url": "https://www.tecmoarabia.com",
           "description": "Power-generation maintenance and engineering services",
@@ -158,7 +134,7 @@
       "companies": [
         {
           "en": "IACC",
-          "ar": "IACC",
+          "ar": "الشركة الدولية للنقل المشترك",
           "logo": "assets/images/iacc-logo.png",
           "url": "http://www.iaccsaudi.com",
           "description": "Freight forwarding and customs-clearance services",
@@ -166,11 +142,19 @@
         },
         {
           "en": "GAC Saudi Arabia",
-          "ar": "GAC Saudi Arabia",
+          "ar": "شركة الخليج العربي للشحن",
           "logo": "assets/images/gac-logo.png",
           "url": "https://www.gac.com/saudi-arabia",
           "description": "Shipping, logistics, and marine services",
           "descriptionAr": "خدمات الشحن واللوجستيات والخدمات البحرية"
+        },
+        {
+          "en": "Al Gosaibi Shipping",
+          "ar": "الشركة السعودية للتفريغ والتحميل",
+          "logo": "assets/images/gosaibi-shipping-logo.png",
+          "url": null,
+          "description": "Shipping and maritime services",
+          "descriptionAr": "خدمات الشحن والخدمات البحرية"
         }
       ]
     },
@@ -196,7 +180,7 @@
         },
         {
           "en": "Yata Travel",
-          "ar": "يتا للسفر والسياحة",
+          "ar": "ياتا للسفر والسياحة",
           "logo": "assets/images/yata-logo.jpeg",
           "url": "https://www.yatatravel.com",
           "description": "Travel and tourism services",

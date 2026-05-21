@@ -35,13 +35,13 @@ permalink: "companies.html"
         {% else %}
         <div class="company-box company-box--no-link">
         {% endif %}
-          <div class="company-box-logo">
+          <div class="company-box-logo company-box-logo--{{ company.logoFit | default('default') }}">
             {% if company.logo %}
-            <div class="company-box-logo-frame">
+            <div class="company-box-logo-media">
               <img src="{{ company.logo }}" alt="{{ company.en }}" loading="lazy" decoding="async" />
             </div>
             {% else %}
-            <div class="company-box-logo-frame company-box-logo-frame--placeholder">
+            <div class="company-box-logo-media company-box-logo-media--placeholder">
               <div class="company-box-logo-placeholder">{{ company.en | truncate(2, true, '') | upper }}</div>
             </div>
             {% endif %}

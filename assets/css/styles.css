@@ -1010,40 +1010,52 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
   text-decoration: none;
   color: inherit;
 }
-.company-box--link:hover { transform: translateY(-4px); box-shadow: var(--shadow-m); border-color: var(--gold); }
-.company-box--no-link { opacity: .72; cursor: default; }
+.company-box--link:hover { transform: translateY(-4px); box-shadow: var(--shadow-m); border-color: var(--brand); }
+.company-box--no-link { opacity: .85; cursor: default; }
 .company-box-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.35rem 1.25rem;
-  background: var(--bg-alt);
+  padding: 1.5rem 1.35rem;
+  background: linear-gradient(180deg, #fafbfd 0%, var(--bg-alt) 100%);
   border-bottom: 1px solid var(--border);
-  min-height: 148px;
+  min-height: 136px;
 }
-/* Fixed white stage: wide logos use width, tall logos use height — same box for all */
-.company-box-logo-frame {
+.company-box-logo-media {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: min(100%, 220px);
-  height: 96px;
-  padding: .65rem .85rem;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(12, 29, 56, .06);
+  width: 100%;
+  height: 84px;
 }
-.company-box-logo-frame img {
+.company-box-logo-media img {
   display: block;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 78%;
+  max-height: 84px;
   width: auto;
   height: auto;
   object-fit: contain;
   object-position: center;
 }
-.company-box-logo-frame--placeholder { background: var(--bg-alt); }
+/* Wide horizontal marks — use more of the card width */
+.company-box-logo--wide .company-box-logo-media {
+  height: 72px;
+}
+.company-box-logo--wide .company-box-logo-media img {
+  max-width: 94%;
+  max-height: 72px;
+  width: 100%;
+}
+/* Tall / stacked marks */
+.company-box-logo--tall .company-box-logo-media {
+  width: min(100%, 132px);
+  height: 96px;
+}
+.company-box-logo--tall .company-box-logo-media img {
+  max-width: 100%;
+  max-height: 96px;
+}
+.company-box-logo-media--placeholder { height: 84px; }
 .company-box-logo-placeholder {
   width: 56px;
   height: 56px;

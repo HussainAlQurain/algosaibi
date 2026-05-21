@@ -332,19 +332,36 @@ h3 { font-size: 1.1rem; font-weight: 600; line-height: 1.4; }
 
 /* ——— ABOUT ——————————————————————————————————————————————— */
 .about-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 3rem 4rem; align-items: start;
+  display: grid; grid-template-columns: 1.05fr .95fr;
+  gap: 3rem 3.5rem; align-items: stretch;
 }
-.about-body { display: grid; gap: 1.1rem; }
-.about-body p { color: var(--t2); line-height: 1.8; }
+.about-story { display: flex; flex-direction: column; }
+.about-body { display: grid; gap: 1.15rem; flex: 1; }
+.about-body p { color: var(--t2); line-height: 1.8; font-size: 1.02rem; }
+.about-figure {
+  margin: 0; min-height: 100%; height: 100%;
+  display: flex; flex-direction: column;
+}
+.about-figure img {
+  flex: 1; width: 100%; min-height: 100%;
+  object-fit: cover; object-position: center 42%;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-m);
+}
+.about-figure figcaption {
+  margin-top: .75rem;
+  font-size: .78rem; color: var(--t3); line-height: 1.5;
+}
 .about-stats {
   display: grid; grid-template-columns: repeat(3,1fr);
   gap: 1rem; margin-top: 1.8rem;
 }
 .stat-item {
-  text-align: center; padding: 1.3rem 1rem;
-  border-radius: var(--r); background: var(--bg-alt);
+  text-align: center; padding: 1.45rem 1rem;
+  border-radius: var(--r-lg); background: #fff;
   border: 1px solid var(--border);
+  box-shadow: var(--shadow-s);
 }
 .stat-num {
   display: block;
@@ -655,7 +672,7 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
 
 .detail-nav { position: static !important; opacity: 1 !important; pointer-events: auto !important; transform: none !important; padding: 0 !important; background: transparent !important; border: none !important; border-radius: 0 !important; box-shadow: none !important; }
 
-/* ——— MISSION SECTION ————————————————————————————————— */
+/* ——— MISSION / OVERVIEW ——————————————————————————————— */
 .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-bottom: 1.8rem; }
 .mission-block {
   padding: 2rem 1.8rem; border-radius: var(--r-lg);
@@ -664,15 +681,96 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
 }
 .mission-block-tag {
   display: inline-block; padding: .22rem .8rem; border-radius: 999px;
-  border: 1px solid var(--gold); background: var(--gold-sub);
-  color: var(--gold); font-size: .72rem; font-weight: 700;
+  border: 1px solid var(--brand); background: var(--brand-sub);
+  color: var(--brand); font-size: .72rem; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase; margin-bottom: .9rem;
 }
 .mission-block p { color: var(--t2); font-size: 1.02rem; line-height: 1.8; font-style: italic; }
 .mission-pillars { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
+
+.overview-section {
+  position: relative;
+  background:
+    linear-gradient(180deg, var(--bg-alt) 0%, #fff 55%, var(--bg-alt) 100%);
+  overflow: hidden;
+}
+.overview-section::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 10% 20%, rgba(37,75,128,.07), transparent 55%),
+    radial-gradient(ellipse 60% 45% at 90% 80%, rgba(37,75,128,.06), transparent 50%);
+  pointer-events: none;
+}
+.overview-section .container { position: relative; z-index: 1; }
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+  max-width: 1040px;
+  margin-inline: auto;
+}
+.overview-card {
+  position: relative;
+  padding: 2.35rem 2.1rem 2.1rem;
+  border-radius: var(--r-lg);
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-m);
+  transition: transform var(--fast) var(--ease), box-shadow var(--fast) var(--ease);
+}
+.overview-card::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; inset-inline-start: 0;
+  width: 4px;
+  border-radius: var(--r-lg) 0 0 var(--r-lg);
+  background: linear-gradient(180deg, var(--brand) 0%, var(--brand-light) 100%);
+}
+[dir="rtl"] .overview-card::before {
+  border-radius: 0 var(--r-lg) var(--r-lg) 0;
+}
+.overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-l);
+}
+.overview-card-index {
+  margin: 0 0 .55rem;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  color: var(--brand-light);
+}
+.overview-card h3 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--navy);
+}
+.overview-card p {
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.08rem);
+  line-height: 1.85;
+  color: var(--t2);
+}
+[dir="rtl"] .overview-card h3 {
+  font-size: clamp(1.35rem, 2.4vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+[dir="rtl"] .overview-card p {
+  font-size: clamp(1.05rem, 1.8vw, 1.12rem);
+  line-height: 1.9;
+}
+[dir="rtl"] .overview-card-index {
+  letter-spacing: .08em;
+}
+
 @media (max-width: 900px) {
   .mission-grid { grid-template-columns: 1fr; }
   .mission-pillars { grid-template-columns: 1fr; }
+  .overview-cards { grid-template-columns: 1fr; }
 }
 
 /* ——— REVEAL ANIMATIONS ————————————————————————————————— */
@@ -752,6 +850,8 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
 @media (max-width: 900px) {
   .section { padding: 4rem 0; }
   .about-grid,.careers-wrap,.contact-wrap,.media-split { grid-template-columns: 1fr; }
+  .about-figure { min-height: 320px; }
+  .about-figure img { min-height: 280px; }
   .timeline-line { display: none; }
   .timeline-item { grid-template-columns: 1fr; gap: .4rem; }
   .tl-year-left .timeline-year, .tl-year-right .timeline-year { grid-column: 1; grid-row: 1; text-align: start; font-size: 1.5rem; opacity: .6; }
@@ -1227,13 +1327,6 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
   border-top: 1px solid var(--border);
   margin-top: .25rem;
 }
-
-/* ── About grid ─────────────────────────────────────────────── */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
-.about-stats { display: flex; gap: 2rem; margin-top: 2rem; }
-.stat-item { display: flex; flex-direction: column; }
-.stat-num { font-size: 2rem; font-weight: 800; color: var(--navy); }
-.stat-label { font-size: .8rem; color: var(--t2); font-weight: 500; }
 
 /* ── Contact layout ─────────────────────────────────────────── */
 .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }

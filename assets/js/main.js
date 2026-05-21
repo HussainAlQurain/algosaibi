@@ -185,11 +185,11 @@ function animateCounter(el) {
   const suffix = el.dataset.suffix || "";
   if (isNaN(target)) return;
   const from = isNaN(start) ? 0 : start;
-  const duration = parseInt(el.dataset.duration, 10) || 1600;
+  const duration = parseInt(el.dataset.duration, 10) || 1100;
   const t0 = performance.now();
   function step(now) {
     const progress = Math.min((now - t0) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
+    const eased = progress === 1 ? 1 : progress === 0 ? 0 : Math.pow(2, 10 * progress - 10);
     const current = Math.round(from + eased * (target - from));
     el.textContent = current + suffix;
     if (progress < 1) requestAnimationFrame(step);

@@ -178,19 +178,19 @@ if (sectorContainer && window.innerWidth > 900) {
   sectorContainer.appendChild(track);
 }
 
-// Counter animation — triggers when .counter-num becomes visible
+// Counter animation — .counter-num and .stat-num with data-target
 function animateCounter(el) {
   const target = parseInt(el.dataset.target, 10);
+  const start = parseInt(el.dataset.start, 10);
   const suffix = el.dataset.suffix || "";
   if (isNaN(target)) return;
-  const duration = 1600;
-  const start = performance.now();
+  const from = isNaN(start) ? 0 : start;
+  const duration = parseInt(el.dataset.duration, 10) || 1600;
+  const t0 = performance.now();
   function step(now) {
-    const elapsed = now - start;
-    const progress = Math.min(elapsed / duration, 1);
-    // ease-out cubic
+    const progress = Math.min((now - t0) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
-    const current = Math.round(eased * target);
+    const current = Math.round(from + eased * (target - from));
     el.textContent = current + suffix;
     if (progress < 1) requestAnimationFrame(step);
     else el.textContent = target + suffix;
@@ -210,8 +210,18 @@ const counterObserver = new IntersectionObserver(
   { threshold: 0.5 }
 );
 
-document.querySelectorAll(".counter-num[data-target]").forEach((el) => {
+document.querySelectorAll(".counter-num[data-target], .stat-num[data-target]").forEach((el) => {
   counterObserver.observe(el);
+});
+
+// Page hero: staggered text + ken burns (about and similar)
+document.querySelectorAll(".page-hero--animate").forEach((hero) => {
+  const start = () => hero.classList.add("is-loaded");
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => requestAnimationFrame(start));
+  } else {
+    requestAnimationFrame(start);
+  }
 });
 
 /* ── News track drag/scroll + progress bar ─────────────────── */

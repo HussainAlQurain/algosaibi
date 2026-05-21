@@ -1,0 +1,21 @@
+{# Renders the Companies nav submenu from companies.json (source of truth). #}
+{# Expects: navLang ("en"|"ar"), navCompaniesHref (e.g. companies.html) #}
+<div class="nav-dropdown-menu">
+  <div class="nav-dropdown-section nav-dropdown-all">
+    <a href="{{ navCompaniesHref }}" class="nav-all-link">
+      {%- if navLang == "ar" -%}عرض جميع الشركات &larr;{%- else -%}View All Companies &rarr;{%- endif -%}
+    </a>
+  </div>
+  {% for sector in companies.sectors %}
+  <div class="nav-dropdown-section">
+    <span class="nav-dropdown-label">{{ sector.ar if navLang == "ar" else sector.en }}</span>
+    {% for company in sector.companies %}
+    {% if company.url %}
+    <a href="{{ company.url }}" target="_blank" rel="noopener">{{ company.ar if navLang == "ar" else company.en }}</a>
+    {% else %}
+    <a href="{{ navCompaniesHref }}">{{ company.ar if navLang == "ar" else company.en }}</a>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>

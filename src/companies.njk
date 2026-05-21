@@ -37,9 +37,13 @@ permalink: "companies.html"
         {% endif %}
           <div class="company-box-logo">
             {% if company.logo %}
-            <img src="{{ company.logo }}" alt="{{ company.en }}" />
+            <div class="company-box-logo-frame">
+              <img src="{{ company.logo }}" alt="{{ company.en }}" loading="lazy" decoding="async" />
+            </div>
             {% else %}
-            <div class="company-box-logo-placeholder">{{ company.en | truncate(2, true, '') | upper }}</div>
+            <div class="company-box-logo-frame company-box-logo-frame--placeholder">
+              <div class="company-box-logo-placeholder">{{ company.en | truncate(2, true, '') | upper }}</div>
+            </div>
             {% endif %}
           </div>
           <div class="company-box-body">

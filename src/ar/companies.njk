@@ -37,9 +37,13 @@ permalink: "ar/companies.html"
         {% endif %}
           <div class="company-box-logo">
             {% if company.logo %}
-            <img src="../{{ company.logo }}" alt="{{ company.ar }}" />
+            <div class="company-box-logo-frame">
+              <img src="../{{ company.logo }}" alt="{{ company.ar }}" loading="lazy" decoding="async" />
+            </div>
             {% else %}
-            <div class="company-box-logo-placeholder">{{ company.ar | truncate(2, true, '') }}</div>
+            <div class="company-box-logo-frame company-box-logo-frame--placeholder">
+              <div class="company-box-logo-placeholder">{{ company.ar | truncate(2, true, '') }}</div>
+            </div>
             {% endif %}
           </div>
           <div class="company-box-body">

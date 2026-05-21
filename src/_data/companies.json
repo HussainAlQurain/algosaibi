@@ -1,81 +1,6 @@
 {
   "sectors": [
     {
-      "en": "Hospitality & Recreation",
-      "ar": "الضيافة والترفيه",
-      "companies": [
-        {
-          "en": "AlGosaibi Hotel",
-          "ar": "فندق القصيبي",
-          "logo": "assets/images/gosaibi-hotel-logo.png",
-          "logoFit": "default",
-          "url": "https://algosaibihotel.com/",
-          "description": "Hotel and hospitality services in Al Khobar",
-          "descriptionAr": "خدمات فندقية وضيافة في الخبر"
-        },
-        {
-          "en": "AlGosaibi Sport Center",
-          "ar": "مركز القصيبي الرياضي",
-          "logo": "assets/images/sport-center-logo.png",
-          "logoFit": "wide",
-          "url": "https://algosaibisports.com/",
-          "description": "Sports and recreation facility in the Eastern Province",
-          "descriptionAr": "مرفق رياضي وترفيهي في المنطقة الشرقية"
-        },
-        {
-          "en": "Club 8",
-          "ar": "كلوب ثمانية",
-          "logo": "assets/images/club8-logo.png",
-          "logoFit": "default",
-          "url": "https://club8sa.com/",
-          "description": "Sports and social club",
-          "descriptionAr": "نادي رياضي واجتماعي"
-        },
-        {
-          "en": "Al Gosaibi Village",
-          "ar": "قرية القصيبي",
-          "logo": "assets/images/algosaibi-village-logo.png",
-          "logoFit": "default",
-          "url": "https://algosaibivillage.com/en-US/",
-          "description": "Family leisure and hospitality destination",
-          "descriptionAr": "وجهة عائلية للترفيه والضيافة"
-        }
-      ]
-    },
-    {
-      "en": "Food & Catering",
-      "ar": "الأغذية والتموين",
-      "companies": [
-        {
-          "en": "Mathaqat Foods Co.",
-          "ar": "شركة مذاقات للمواد الغذائية",
-          "logo": "assets/images/mathaqat-logo.png",
-          "logoFit": "wide",
-          "url": "https://mathaqat.com.sa/",
-          "description": "Food products and distribution",
-          "descriptionAr": "المنتجات الغذائية والتوزيع"
-        },
-        {
-          "en": "Qaf Catering Services",
-          "ar": "شركة قاف لتقديم الوجبات",
-          "logo": "assets/images/qaf-logo.png",
-          "logoFit": "default",
-          "url": "https://qafcatering.com/",
-          "description": "Catering and food-service operations",
-          "descriptionAr": "عمليات التموين والخدمات الغذائية"
-        },
-        {
-          "en": "Mathaqat Al Sharq",
-          "ar": "شركة مذاقات الشرق للمقاولات العامة",
-          "logo": "assets/images/mathaqat-alsharq-logo.svg",
-          "logoFit": "default",
-          "url": null,
-          "description": "Food and consumer-business activities",
-          "descriptionAr": "أنشطة الأغذية والأعمال الاستهلاكية"
-        }
-      ]
-    },
-    {
       "en": "Manufacturing & Industrial",
       "ar": "الصناعة والتصنيع",
       "companies": [
@@ -171,6 +96,81 @@
           "url": null,
           "description": "Shipping and maritime services",
           "descriptionAr": "خدمات الشحن والخدمات البحرية"
+        }
+      ]
+    },
+    {
+      "en": "Food & Catering",
+      "ar": "الأغذية والتموين",
+      "companies": [
+        {
+          "en": "Mathaqat Foods Co.",
+          "ar": "شركة مذاقات للمواد الغذائية",
+          "logo": "assets/images/mathaqat-logo.png",
+          "logoFit": "wide",
+          "url": "https://mathaqat.com.sa/",
+          "description": "Food products and distribution",
+          "descriptionAr": "المنتجات الغذائية والتوزيع"
+        },
+        {
+          "en": "Qaf Catering Services",
+          "ar": "شركة قاف لتقديم الوجبات",
+          "logo": "assets/images/qaf-logo.png",
+          "logoFit": "default",
+          "url": "https://qafcatering.com/",
+          "description": "Catering and food-service operations",
+          "descriptionAr": "عمليات التموين والخدمات الغذائية"
+        },
+        {
+          "en": "Mathaqat Al Sharq",
+          "ar": "شركة مذاقات الشرق للمقاولات العامة",
+          "logo": "assets/images/mathaqat-alsharq-logo.svg",
+          "logoFit": "default",
+          "url": null,
+          "description": "Food and consumer-business activities",
+          "descriptionAr": "أنشطة الأغذية والأعمال الاستهلاكية"
+        }
+      ]
+    },
+    {
+      "en": "Hospitality & Recreation",
+      "ar": "الضيافة والترفيه",
+      "companies": [
+        {
+          "en": "AlGosaibi Hotel",
+          "ar": "فندق القصيبي",
+          "logo": "assets/images/gosaibi-hotel-logo.png",
+          "logoFit": "default",
+          "url": "https://algosaibihotel.com/",
+          "description": "Hotel and hospitality services in Al Khobar",
+          "descriptionAr": "خدمات فندقية وضيافة في الخبر"
+        },
+        {
+          "en": "AlGosaibi Sport Center",
+          "ar": "مركز القصيبي الرياضي",
+          "logo": "assets/images/sport-center-logo.png",
+          "logoFit": "wide",
+          "url": "https://algosaibisports.com/",
+          "description": "Sports and recreation facility in the Eastern Province",
+          "descriptionAr": "مرفق رياضي وترفيهي في المنطقة الشرقية"
+        },
+        {
+          "en": "Club 8",
+          "ar": "كلوب ثمانية",
+          "logo": "assets/images/club8-logo.png",
+          "logoFit": "default",
+          "url": "https://club8sa.com/",
+          "description": "Sports and social club",
+          "descriptionAr": "نادي رياضي واجتماعي"
+        },
+        {
+          "en": "Al Gosaibi Village",
+          "ar": "قرية القصيبي",
+          "logo": "assets/images/algosaibi-village-logo.png",
+          "logoFit": "default",
+          "url": "https://algosaibivillage.com/en-US/",
+          "description": "Family leisure and hospitality destination",
+          "descriptionAr": "وجهة عائلية للترفيه والضيافة"
         }
       ]
     },

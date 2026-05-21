@@ -2046,7 +2046,7 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
 /* ── Unified 5-card grid ─────────────────────────────────────── */
 .bd-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem; margin-top: 2.8rem;
 }
 .bd-card {

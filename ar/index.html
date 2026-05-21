@@ -13,15 +13,16 @@
   <body>
     <header class="site-header" id="top">
       <div class="container nav-wrap">
-        <a href="index.html" class="brand" aria-label="القصيبي الصفحة الرئيسية">
-          <img src="../assets/images/logo.png" alt="شعار مجموعة القصيبي" class="brand-logo" />
-        </a>
+        <div class="header-brands">
+          <a href="index.html" class="brand" aria-label="القصيبي الصفحة الرئيسية">
+            <img src="../assets/images/logo.png" alt="شعار مجموعة القصيبي" class="brand-logo" />
+          </a>
+          <img src="../assets/images/Saudi_Vision_2030_logo.svg" alt="رؤية السعودية 2030" class="vision-2030-logo" width="78" height="52" />
+        </div>
         <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="تبديل القائمة">
           <span></span><span></span><span></span>
         </button>
         <nav class="site-nav" id="navMenu">
-          <a href="../index.html" class="lang-link" id="langSwitchLabel">EN</a>
-          <a href="index.html" class="lang-link is-active">AR</a>
           <a href="about.html" >من نحن</a>
           <a href="values.html" >قيمنا</a>
           <a href="history.html" >تاريخنا</a>
@@ -67,9 +68,13 @@
               </div>
             </div>
           </div>
-          <a href="media-events.html" >الإعلام والفعاليات</a>
+          <a href="media-events.html" >الإعلام&nbsp;والفعاليات</a>
           <a href="board.html" >المجلس</a>
-          <a href="contact.html" class="btn btn-sm btn-gold" >الوظائف والتواصل</a>
+          <a href="contact.html" class="nav-cta" >الوظائف&nbsp;والتواصل</a>
+          <div class="lang-switch" role="group" aria-label="اللغة">
+            <a href="index.html" class="lang-switch-btn is-active" aria-current="true">عربي</a>
+            <a href="../index.html" class="lang-switch-btn" id="langSwitchLabel" aria-label="التبديل إلى الإنجليزية">إنجليزي</a>
+          </div>
         </nav>
       </div>
     </header>

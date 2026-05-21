@@ -19,8 +19,8 @@ const MEDIA_PAGE_DATA = {
     contact: "Contact",
     contactAction: "Contact Group",
     companiesAction: "All Companies",
-    otherLanguage: "AR",
-    otherLanguageLabel: "Arabic",
+    otherLanguage: "عربي",
+    otherLanguageLabel: "Switch to Arabic",
     footer: "© 2026 Ahmad Hamad Al-Gosaibi & Bros. Co. All rights reserved.",
     top: "Back to top",
     metaItems: [
@@ -68,8 +68,8 @@ const MEDIA_PAGE_DATA = {
     contact: "اتصل بنا",
     contactAction: "تواصل مع المجموعة",
     companiesAction: "جميع الشركات",
-    otherLanguage: "EN",
-    otherLanguageLabel: "English",
+    otherLanguage: "إنجليزي",
+    otherLanguageLabel: "التبديل إلى الإنجليزية",
     footer: "© 2026 أحمد حمد القصيبي وإخوانه. جميع الحقوق محفوظة.",
     top: "العودة للأعلى",
     metaItems: [

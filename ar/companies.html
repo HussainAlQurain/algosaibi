@@ -13,15 +13,16 @@
   <body>
     <header class="site-header" id="top">
       <div class="container nav-wrap">
-        <a href="index.html" class="brand" aria-label="القصيبي الصفحة الرئيسية">
-          <img src="../assets/images/logo.png" alt="شعار مجموعة القصيبي" class="brand-logo" />
-        </a>
+        <div class="header-brands">
+          <a href="index.html" class="brand" aria-label="القصيبي الصفحة الرئيسية">
+            <img src="../assets/images/logo.png" alt="شعار مجموعة القصيبي" class="brand-logo" />
+          </a>
+          <img src="../assets/images/Saudi_Vision_2030_logo.svg" alt="رؤية السعودية 2030" class="vision-2030-logo" width="78" height="52" />
+        </div>
         <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="تبديل القائمة">
           <span></span><span></span><span></span>
         </button>
         <nav class="site-nav" id="navMenu">
-          <a href="../companies.html" class="lang-link" id="langSwitchLabel">EN</a>
-          <a href="index.html" class="lang-link is-active">AR</a>
           <a href="about.html" >من نحن</a>
           <a href="values.html" >قيمنا</a>
           <a href="history.html" >تاريخنا</a>
@@ -67,9 +68,13 @@
               </div>
             </div>
           </div>
-          <a href="media-events.html" >الإعلام والفعاليات</a>
+          <a href="media-events.html" >الإعلام&nbsp;والفعاليات</a>
           <a href="board.html" >المجلس</a>
-          <a href="contact.html" class="btn btn-sm btn-gold" >الوظائف والتواصل</a>
+          <a href="contact.html" class="nav-cta" >الوظائف&nbsp;والتواصل</a>
+          <div class="lang-switch" role="group" aria-label="اللغة">
+            <a href="index.html" class="lang-switch-btn is-active" aria-current="true">عربي</a>
+            <a href="../companies.html" class="lang-switch-btn" id="langSwitchLabel" aria-label="التبديل إلى الإنجليزية">إنجليزي</a>
+          </div>
         </nav>
       </div>
     </header>
@@ -220,11 +225,11 @@
         
           <div class="company-box-logo">
             
-            <div class="company-box-logo-placeholder">أغ</div>
+            <div class="company-box-logo-placeholder">شر</div>
             
           </div>
           <div class="company-box-body">
-            <h4>أغذية القصيبي</h4>
+            <h4>شركة مذاقات الشرق للمقاولات العامة</h4>
             <p>أنشطة الأغذية والأعمال الاستهلاكية</p>
             
             <span class="company-no-site">الموقع قريباً</span>
@@ -260,11 +265,11 @@
         
           <div class="company-box-logo">
             
-            <img src="../assets/images/arabian-pipecoating-logo.jpeg" alt="الشركة العربية لطلاء الأنابيب" />
+            <img src="../assets/images/arabian-pipecoating-logo.jpeg" alt="الشركة العربية لتغليف الأنابيب" />
             
           </div>
           <div class="company-box-body">
-            <h4>الشركة العربية لطلاء الأنابيب</h4>
+            <h4>الشركة العربية لتغليف الأنابيب</h4>
             <p>خدمات طلاء الأنابيب والحماية من التآكل</p>
             
             <span class="company-visit">زيارة الموقع &larr;</span>
@@ -279,11 +284,11 @@
         
           <div class="company-box-logo">
             
-            <img src="../assets/images/crown-logo.jpeg" alt="Crown Arabia" />
+            <img src="../assets/images/crown-logo.jpeg" alt="شركة كراون العربية" />
             
           </div>
           <div class="company-box-body">
-            <h4>Crown Arabia</h4>
+            <h4>شركة كراون العربية</h4>
             <p>تصنيع علب المشروبات المصنوعة من الألمنيوم</p>
             
             <span class="company-visit">زيارة الموقع &larr;</span>
@@ -298,11 +303,11 @@
         
           <div class="company-box-logo">
             
-            <img src="../assets/images/jotun-logo.png" alt="Jotun Powder Coatings" />
+            <img src="../assets/images/jotun-logo.png" alt="شركة جوتن باودر كوتنغز العربية السعودية" />
             
           </div>
           <div class="company-box-body">
-            <h4>Jotun Powder Coatings</h4>
+            <h4>شركة جوتن باودر كوتنغز العربية السعودية</h4>
             <p>منتجات وخدمات الطلاء بالمساحيق</p>
             
             <span class="company-visit">زيارة الموقع &larr;</span>
@@ -319,11 +324,11 @@
         
           <div class="company-box-logo">
             
-            <img src="../assets/images/solar-arabia-logo.png" alt="Solar Arabia" />
+            <img src="../assets/images/solar-arabia-logo.png" alt="الشركة العربية للطاقة الشمسية" />
             
           </div>
           <div class="company-box-body">
-            <h4>Solar Arabia</h4>
+            <h4>الشركة العربية للطاقة الشمسية</h4>
             <p>استشارات الطاقة المتجددة وتطوير المشاريع</p>
             
             <span class="company-visit">زيارة الموقع &larr;</span>
@@ -338,11 +343,11 @@
         
           <div class="company-box-logo">
             
-            <img src="../assets/images/tecmo-logo.png" alt="Tecmo Arabia Ltd" />
+            <img src="../assets/images/tecmo-logo.png" alt="شركة تكمو العربية" />
             
           </div>
           <div class="company-box-body">
-            <h4>Tecmo Arabia Ltd</h4>
+            <h4>شركة تكمو العربية</h4>
             <p>خدمات صيانة توليد الطاقة والهندسة</p>
             
             <span class="company-visit">زيارة الموقع &larr;</span>
@@ -359,11 +364,11 @@
         
           <div class="company-box-logo">
             
-            <img src="../assets/images/iacc-logo.png" alt="IACC" />
+            <img src="../assets/images/iacc-logo.png" alt="الشركة الدولية للنقل المشترك" />
             
           </div>
           <div class="company-box-body">
-            <h4>IACC</h4>
+            <h4>الشركة الدولية للنقل المشترك</h4>
             <p>خدمات الشحن والتخليص الجمركي</p>
             
             <span class="company-visit">زيارة الموقع &larr;</span>
@@ -378,11 +383,11 @@
         
           <div class="company-box-logo">
             
-            <img src="../assets/images/gac-logo.png" alt="GAC Saudi Arabia" />
+            <img src="../assets/images/gac-logo.png" alt="شركة الخليج العربي للشحن" />
             
           </div>
           <div class="company-box-body">
-            <h4>GAC Saudi Arabia</h4>
+            <h4>شركة الخليج العربي للشحن</h4>
             <p>خدمات الشحن واللوجستيات والخدمات البحرية</p>
             
             <span class="company-visit">زيارة الموقع &larr;</span>
@@ -390,6 +395,25 @@
           </div>
         
         </a>
+        
+        
+        
+        <div class="company-box company-box--no-link">
+        
+          <div class="company-box-logo">
+            
+            <img src="../assets/images/gosaibi-shipping-logo.png" alt="الشركة السعودية للتفريغ والتحميل" />
+            
+          </div>
+          <div class="company-box-body">
+            <h4>الشركة السعودية للتفريغ والتحميل</h4>
+            <p>خدمات الشحن والخدمات البحرية</p>
+            
+            <span class="company-no-site">الموقع قريباً</span>
+            
+          </div>
+        
+        </div>
         
         
       
@@ -437,11 +461,11 @@
         
           <div class="company-box-logo">
             
-            <img src="../assets/images/yata-logo.jpeg" alt="يتا للسفر والسياحة" />
+            <img src="../assets/images/yata-logo.jpeg" alt="ياتا للسفر والسياحة" />
             
           </div>
           <div class="company-box-body">
-            <h4>يتا للسفر والسياحة</h4>
+            <h4>ياتا للسفر والسياحة</h4>
             <p>خدمات السفر والسياحة</p>
             
             <span class="company-visit">زيارة الموقع &larr;</span>

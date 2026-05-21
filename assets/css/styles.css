@@ -798,7 +798,8 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  .page-hero--about .hero-bg-img { animation: none; transform: none; }
+  .page-hero--about .hero-bg-img,
+  .page-hero--values .hero-bg-img { animation: none; transform: none; }
   .page-hero--animate .hero-animate-item {
     opacity: 1; transform: none; filter: none; clip-path: none; transition: none;
   }
@@ -975,6 +976,39 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
 @keyframes pageHeroKenBurns {
   from { transform: scale(1.06); }
   to { transform: scale(1.16); }
+}
+.page-hero--values {
+  min-height: 70vh;
+  align-items: flex-end;
+}
+.page-hero--values .hero-bg-img {
+  object-position: 58% 38%;
+  transform: scale(1.1);
+  animation: pageHeroKenBurns 24s ease-out forwards;
+}
+.page-hero--values .hero-overlay {
+  background:
+    linear-gradient(to right, rgba(8,25,43,.94) 0%, rgba(8,25,43,.72) 32%, rgba(8,25,43,.22) 52%, rgba(8,25,43,.04) 68%),
+    linear-gradient(to top, rgba(8,25,43,.82) 0%, rgba(8,25,43,.25) 42%, transparent 62%);
+}
+[dir="rtl"] .page-hero--values .hero-overlay {
+  background:
+    linear-gradient(to left, rgba(8,25,43,.94) 0%, rgba(8,25,43,.72) 32%, rgba(8,25,43,.22) 52%, rgba(8,25,43,.04) 68%),
+    linear-gradient(to top, rgba(8,25,43,.82) 0%, rgba(8,25,43,.25) 42%, transparent 62%);
+}
+.page-hero--values .hero-container {
+  padding-bottom: 4.5rem;
+  align-items: flex-end;
+}
+.hero-copy--values {
+  max-width: 34rem;
+}
+.section-lead {
+  color: var(--t2);
+  max-width: 60ch;
+  margin: 1rem auto 0;
+  line-height: 1.85;
+  font-size: 1.05rem;
 }
 .page-hero .hero-container {
   position: relative;
@@ -1175,39 +1209,112 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
 /* ── Timeline Year ──────────────────────────────────────────── */
 /* .timeline-year is now a standalone large label — styles merged above */
 
-/* ── Values Detail Page (Zamil-style) ───────────────────────── */
+/* ── Values page ────────────────────────────────────────────── */
 .values-detail-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
   margin-top: 2.5rem;
 }
 .value-detail-card {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.35rem;
   align-items: flex-start;
-  padding: 1.75rem;
+  padding: 1.85rem 1.65rem;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--r-lg);
   background: #fff;
   box-shadow: var(--shadow-s);
-  transition: transform .25s, box-shadow .25s, border-color .25s;
+  transition: transform var(--fast) var(--ease), box-shadow var(--fast) var(--ease), border-color var(--fast) var(--ease);
 }
-.value-detail-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-m); border-color: var(--gold); }
+.value-detail-card.is-visible {
+  animation: valueCardIn .65s var(--ease) both;
+}
+.values-detail-grid .value-detail-card:nth-child(2).is-visible { animation-delay: .08s; }
+.values-detail-grid .value-detail-card:nth-child(3).is-visible { animation-delay: .16s; }
+.values-detail-grid .value-detail-card:nth-child(4).is-visible { animation-delay: .08s; }
+.values-detail-grid .value-detail-card:nth-child(5).is-visible { animation-delay: .16s; }
+.values-detail-grid .value-detail-card:nth-child(6).is-visible { animation-delay: .24s; }
+@keyframes valueCardIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.value-detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-m);
+  border-color: var(--brand-light);
+}
 .value-detail-icon {
   flex-shrink: 0;
-  width: 64px;
-  height: 64px;
-  background: var(--bg-alt);
-  border-radius: 14px;
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(145deg, var(--bg-alt) 0%, #fff 100%);
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border);
+  box-shadow: var(--shadow-s);
 }
-.value-detail-icon img { width: 36px; height: 36px; object-fit: contain; }
-.value-detail-body h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: .5rem; }
-.value-detail-body p { font-size: .9rem; color: var(--t2); line-height: 1.8; margin: 0; }
+.value-detail-icon img { width: 40px; height: 40px; object-fit: contain; }
+.value-detail-body h3 {
+  font-size: clamp(1.12rem, 2vw, 1.28rem);
+  color: var(--navy);
+  margin-bottom: .55rem;
+  font-weight: 700;
+}
+.value-detail-body p {
+  font-size: clamp(.95rem, 1.5vw, 1.02rem);
+  color: var(--t2);
+  line-height: 1.85;
+  margin: 0;
+}
+[dir="rtl"] .value-detail-body h3 {
+  font-size: clamp(1.28rem, 2.2vw, 1.45rem);
+  font-weight: 800;
+}
+[dir="rtl"] .value-detail-body p { line-height: 1.95; }
+
+.values-statement-section {
+  background: var(--navy);
+  color: var(--t-light);
+}
+.values-statement-section .section-head h2 { color: #fff; }
+.values-statement-section .eyebrow { color: var(--brand-pale); }
+.values-statement-section .eyebrow::before,
+.values-statement-section .eyebrow::after { background: var(--brand-light); }
+.values-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+.values-pillar-card {
+  padding: 2rem 1.65rem;
+  border-radius: var(--r-lg);
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border-d);
+  transition: transform var(--fast) var(--ease), background var(--fast) var(--ease);
+}
+.values-pillar-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,.1);
+}
+.values-pillar-card h3 {
+  margin: 0 0 .75rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  font-weight: 700;
+  color: #fff;
+}
+.values-pillar-card p {
+  margin: 0;
+  font-size: .98rem;
+  line-height: 1.8;
+  color: var(--t-pale);
+}
+[dir="rtl"] .values-pillar-card h3 {
+  font-size: clamp(1.2rem, 2vw, 1.35rem);
+  font-weight: 800;
+}
 
 /* ── Companies Page ─────────────────────────────────────────── */
 .companies-sector-block { margin-bottom: 3.5rem; }
@@ -1378,6 +1485,7 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
 @media (max-width: 960px) {
   .history-ancestors-grid { grid-template-columns: 1fr; }
   .values-detail-grid { grid-template-columns: 1fr; }
+  .values-pillars { grid-template-columns: 1fr; }
   .companies-cards-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; }
   .contact-layout { grid-template-columns: 1fr; }

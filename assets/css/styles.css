@@ -798,9 +798,25 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
 /* ——— FOOTER ————————————————————————————————————————————— */
 .site-footer { background: var(--navy); color: var(--t-light); padding: 4.5rem 0 0; }
 .footer-grid {
-  display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.4fr;
+  display: grid; grid-template-columns: 1.8fr 1fr 1.4fr;
   gap: 2.5rem; padding-bottom: 3rem;
   border-bottom: 1px solid var(--border-d);
+}
+.footer-social { display: flex; gap: .65rem; margin-top: 1.3rem; }
+.footer-social a {
+  width: 38px; height: 38px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  color: var(--t-pale);
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border-d);
+  transition: color var(--fast), background var(--fast), transform var(--fast), border-color var(--fast);
+}
+.footer-social a:hover {
+  color: #fff;
+  background: var(--brand);
+  border-color: var(--brand);
+  transform: translateY(-2px);
 }
 .footer-brand-logo { width: clamp(130px,15vw,200px); height: auto; object-fit: contain; filter: brightness(0) invert(1); opacity: .8; margin-bottom: 1.1rem; }
 .footer-tagline { color: var(--t-pale); font-size: .87rem; line-height: 1.72; max-width: 28ch; }

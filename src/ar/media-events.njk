@@ -24,25 +24,11 @@ permalink: "ar/media-events.html"
     <div class="section-head centered reveal">
       <p class="eyebrow">من الأرشيف</p>
       <h2>الصحافة والإرث</h2>
-      <p class="section-lead">تغطية من صحيفة <em>اليوم</em> تسلّط الضوء على الدور التجاري الرائد للمجموعة في المنطقة الشرقية.</p>
+      <p class="section-lead">عقود من تغطية صحيفة <em>اليوم</em> لأحمد حمد القصيبي وإخوانه — تصفّح الصفحات من 1988 إلى 2002.</p>
     </div>
-    <div class="media-archive reveal delay-1">
-      <figure class="media-archive__figure">
-        <a href="../assets/images/newspaper.jpeg" class="media-archive__zoom" target="_blank" rel="noopener">
-          <img src="../assets/images/newspaper.jpeg" alt="تغطية صحيفة اليوم عن أحمد حمد القصيبي والمشاريع التجارية الرائدة" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>
-          <span class="media-archive__source">اليوم</span>
-          <span class="media-archive__date">2 نوفمبر 1998</span>
-        </figcaption>
-      </figure>
-      <div class="media-archive__copy">
-        <p class="media-archive__tag">تغطية مميزة</p>
-        <blockquote class="media-archive__quote">القصيبي.. رجل المشاريع التجارية الرائدة</blockquote>
-        <p>تستعرض هذه الصفحة الكاملة الشيخ أحمد بن حمد القصيبي والمحطات التجارية المبكرة للعائلة — من التخزين والتوريد لأرامكو السعودية إلى المشاركة الصناعية في المنطقة الشرقية.</p>
-        <p class="media-archive__note">اضغط على الصورة لعرض صفحة الجريدة كاملة.</p>
-      </div>
-    </div>
+    {% set navLang = "ar" %}
+    {% set assetPrefix = "../" %}
+    {% include "archive-flipbook.njk" %}
   </div>
 </section>
 

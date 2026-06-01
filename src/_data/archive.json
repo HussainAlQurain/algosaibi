@@ -1,0 +1,124 @@
+{
+  "pages": [
+    {
+      "img": "assets/images/archive/archive-01-1988-03-02.jpg",
+      "iso": "1988-03-02",
+      "dateEn": "2 March 1988",
+      "dateAr": "2 مارس 1988",
+      "w": 2000,
+      "h": 2704
+    },
+    {
+      "img": "assets/images/archive/archive-02-1989-06-28.jpg",
+      "iso": "1989-06-28",
+      "dateEn": "28 June 1989",
+      "dateAr": "28 يونيو 1989",
+      "w": 2000,
+      "h": 2755
+    },
+    {
+      "img": "assets/images/archive/archive-03-1990-12-31.jpg",
+      "iso": "1990-12-31",
+      "dateEn": "31 December 1990",
+      "dateAr": "31 ديسمبر 1990",
+      "w": 2000,
+      "h": 2702
+    },
+    {
+      "img": "assets/images/archive/archive-04-1992-08-12.jpg",
+      "iso": "1992-08-12",
+      "dateEn": "12 August 1992",
+      "dateAr": "12 أغسطس 1992",
+      "w": 2000,
+      "h": 2728
+    },
+    {
+      "img": "assets/images/archive/archive-05-1992-08-17.jpg",
+      "iso": "1992-08-17",
+      "dateEn": "17 August 1992",
+      "dateAr": "17 أغسطس 1992",
+      "w": 2000,
+      "h": 2682
+    },
+    {
+      "img": "assets/images/archive/archive-06-1992-11-14.jpg",
+      "iso": "1992-11-14",
+      "dateEn": "14 November 1992",
+      "dateAr": "14 نوفمبر 1992",
+      "w": 2000,
+      "h": 3018
+    },
+    {
+      "img": "assets/images/archive/archive-07-1992-11-15.jpg",
+      "iso": "1992-11-15",
+      "dateEn": "15 November 1992",
+      "dateAr": "15 نوفمبر 1992",
+      "w": 2000,
+      "h": 2959
+    },
+    {
+      "img": "assets/images/archive/archive-08-1994-06-28.jpg",
+      "iso": "1994-06-28",
+      "dateEn": "28 June 1994",
+      "dateAr": "28 يونيو 1994",
+      "w": 1452,
+      "h": 2192
+    },
+    {
+      "img": "assets/images/archive/archive-09-1995-02-08.jpg",
+      "iso": "1995-02-08",
+      "dateEn": "8 February 1995",
+      "dateAr": "8 فبراير 1995",
+      "w": 1452,
+      "h": 2156
+    },
+    {
+      "img": "assets/images/archive/archive-10-1998-11-02.jpg",
+      "iso": "1998-11-02",
+      "dateEn": "2 November 1998",
+      "dateAr": "2 نوفمبر 1998",
+      "w": 1090,
+      "h": 1600
+    },
+    {
+      "img": "assets/images/archive/archive-11-2000-02-06.jpg",
+      "iso": "2000-02-06",
+      "dateEn": "6 February 2000",
+      "dateAr": "6 فبراير 2000",
+      "w": 1435,
+      "h": 2176
+    },
+    {
+      "img": "assets/images/archive/archive-12-2001-07-10.jpg",
+      "iso": "2001-07-10",
+      "dateEn": "10 July 2001",
+      "dateAr": "10 يوليو 2001",
+      "w": 1449,
+      "h": 2166
+    },
+    {
+      "img": "assets/images/archive/archive-13-2002-02-03.jpg",
+      "iso": "2002-02-03",
+      "dateEn": "3 February 2002",
+      "dateAr": "3 فبراير 2002",
+      "w": 1470,
+      "h": 2211
+    },
+    {
+      "img": "assets/images/archive/archive-14-2002-02-10.jpg",
+      "iso": "2002-02-10",
+      "dateEn": "10 February 2002",
+      "dateAr": "10 فبراير 2002",
+      "w": 1463,
+      "h": 2214
+    },
+    {
+      "img": "assets/images/archive/archive-15-2002-03-18.jpg",
+      "iso": "2002-03-18",
+      "dateEn": "18 March 2002",
+      "dateAr": "18 مارس 2002",
+      "w": 1458,
+      "h": 2156
+    }
+  ]
+}

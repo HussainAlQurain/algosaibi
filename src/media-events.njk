@@ -24,26 +24,11 @@ permalink: "media-events.html"
     <div class="section-head centered reveal">
       <p class="eyebrow">From the Archive</p>
       <h2>Press &amp; Heritage</h2>
-      <p class="section-lead">A feature from <em>Al-Yaum</em> newspaper highlighting the Group&rsquo;s pioneering commercial role in the Eastern Province.</p>
+      <p class="section-lead">Decades of <em>Al-Yaum</em> coverage of Ahmad Hamad Algosaibi &amp; Bros. Co. — flip through the pages, from 1988 to 2002.</p>
     </div>
-    <div class="media-archive reveal delay-1">
-      <figure class="media-archive__figure">
-        <a href="assets/images/newspaper.jpeg" class="media-archive__zoom" target="_blank" rel="noopener">
-          <img src="assets/images/newspaper.jpeg" alt="Al-Yaum newspaper feature on Ahmad Hamad Algosaibi and pioneering commercial projects" loading="lazy" decoding="async" />
-        </a>
-        <figcaption>
-          <span class="media-archive__source">Al-Yaum</span>
-          <span class="media-archive__date">2 November 1998</span>
-        </figcaption>
-      </figure>
-      <div class="media-archive__copy">
-        <p class="media-archive__tag">Featured coverage</p>
-        <blockquote class="media-archive__quote" lang="ar" dir="rtl">القصيبي.. رجل المشاريع التجارية الرائدة</blockquote>
-        <p class="media-archive__quote-en"><em>Al-Gosaibi&hellip; the man of pioneering commercial projects</em></p>
-        <p>This full-page feature profiles Sheikh Ahmad bin Hamad Algosaibi and the family&rsquo;s early commercial milestones — from warehousing and supply for Saudi Aramco to industrial participation across the Eastern Province.</p>
-        <p class="media-archive__note">Select the image to view the full newspaper spread.</p>
-      </div>
-    </div>
+    {% set navLang = "en" %}
+    {% set assetPrefix = "" %}
+    {% include "archive-flipbook.njk" %}
   </div>
 </section>
 

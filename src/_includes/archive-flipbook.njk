@@ -1,0 +1,42 @@
+{# Newspaper archive flipbook. Expects: navLang ("en"|"ar"), assetPrefix ("" | "../") #}
+{% set isAr = navLang == "ar" %}
+<div class="flipbook reveal delay-1" data-flipbook dir="{{ 'rtl' if isAr else 'ltr' }}">
+  <div class="flipbook__stage">
+    <button type="button" class="flipbook__nav flipbook__nav--prev" data-flip-prev aria-label="{{ 'الصفحة السابقة' if isAr else 'Previous page' }}">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+    </button>
+
+    <div class="flipbook__book" data-flip-book>
+      <div class="flipbook__sheen" aria-hidden="true"></div>
+      <img class="flipbook__static" data-flip-static src="" alt="" decoding="async" />
+      <div class="flipbook__leaf" data-flip-leaf aria-hidden="true">
+        <div class="flipbook__face flipbook__face--front"><img data-flip-front src="" alt="" /></div>
+        <div class="flipbook__face flipbook__face--back"><img data-flip-back src="" alt="" /></div>
+      </div>
+      <div class="flipbook__spine" aria-hidden="true"></div>
+    </div>
+
+    <button type="button" class="flipbook__nav flipbook__nav--next" data-flip-next aria-label="{{ 'الصفحة التالية' if isAr else 'Next page' }}">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <div class="flipbook__bar">
+    <span class="flipbook__source">{{ 'اليوم' if isAr else 'Al-Yaum' }}</span>
+    <span class="flipbook__date" data-flip-date></span>
+    <input type="range" class="flipbook__range" data-flip-range min="0" max="0" value="0" step="1" aria-label="{{ 'انتقل إلى صفحة' if isAr else 'Jump to page' }}" />
+    <span class="flipbook__counter" data-flip-counter></span>
+    <a class="flipbook__expand" data-flip-expand href="#" target="_blank" rel="noopener" aria-label="{{ 'فتح الصورة كاملة' if isAr else 'Open full image' }}">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-8 8M10 20H4v-6M4 20l8-8"/></svg>
+      <span>{{ 'عرض كامل' if isAr else 'Full view' }}</span>
+    </a>
+  </div>
+
+  <script type="application/json" data-flipbook-data>
+  [
+  {%- for p in archive.pages -%}
+    {"img":"{{ assetPrefix }}{{ p.img }}","date":"{{ p.dateAr if isAr else p.dateEn }}"}{% if not loop.last %},{% endif %}
+  {%- endfor -%}
+  ]
+  </script>
+</div>

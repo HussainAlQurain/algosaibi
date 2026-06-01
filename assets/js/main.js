@@ -260,3 +260,298 @@ document.querySelectorAll(".page-hero--animate").forEach((hero) => {
     if (track) track.style.cursor = "grab";
   });
 })();
+
+/* ── Newspaper archive flipbook ────────────────────────────── */
+document.querySelectorAll("[data-flipbook]").forEach((root) => {
+  const dataEl = root.querySelector("[data-flipbook-data]");
+  if (!dataEl) return;
+  let pages = [];
+  try {
+    pages = JSON.parse(dataEl.textContent);
+  } catch (e) {
+    return;
+  }
+  if (!pages.length) return;
+
+  const isRtl = root.getAttribute("dir") === "rtl";
+  const book = root.querySelector("[data-flip-book]");
+  const staticImg = root.querySelector("[data-flip-static]");
+  const leaf = root.querySelector("[data-flip-leaf]");
+  const front = root.querySelector("[data-flip-front]");
+  const back = root.querySelector("[data-flip-back]");
+  const prevBtn = root.querySelector("[data-flip-prev]");
+  const nextBtn = root.querySelector("[data-flip-next]");
+  const dateEl = root.querySelector("[data-flip-date]");
+  const counterEl = root.querySelector("[data-flip-counter]");
+  const range = root.querySelector("[data-flip-range]");
+  const expand = root.querySelector("[data-flip-expand]");
+
+  const total = pages.length;
+  const FWD = isRtl ? 180 : -180;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let index = 0;
+  let animating = false;
+
+  range.min = 0;
+  range.max = total - 1;
+  range.value = 0;
+
+  const preload = (i) => {
+    if (i >= 0 && i < total) {
+      const im = new Image();
+      im.src = pages[i].img;
+    }
+  };
+
+  const render = () => {
+    staticImg.src = pages[index].img;
+    staticImg.alt = pages[index].date;
+    dateEl.textContent = pages[index].date;
+    counterEl.textContent = index + 1 + " / " + total;
+    range.value = index;
+    expand.href = pages[index].img;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === total - 1;
+    preload(index + 1);
+    preload(index - 1);
+  };
+
+  const go = (target) => {
+    if (animating || target < 0 || target >= total || target === index) return;
+    const forward = target > index;
+
+    if (reduceMotion) {
+      index = target;
+      render();
+      return;
+    }
+
+    animating = true;
+    root.classList.add("flipbook--turning");
+
+    if (forward) {
+      front.src = pages[index].img;
+      back.src = pages[target].img;
+      staticImg.src = pages[target].img;
+      leaf.style.transition = "none";
+      leaf.style.transform = "rotateY(0deg)";
+      void leaf.offsetWidth;
+      leaf.style.transition = "";
+      leaf.style.transform = "rotateY(" + FWD + "deg)";
+    } else {
+      front.src = pages[target].img;
+      back.src = pages[index].img;
+      staticImg.src = pages[index].img;
+      leaf.style.transition = "none";
+      leaf.style.transform = "rotateY(" + FWD + "deg)";
+      void leaf.offsetWidth;
+      leaf.style.transition = "";
+      leaf.style.transform = "rotateY(0deg)";
+    }
+
+    let settled = false;
+    const done = (e) => {
+      if (e && e.propertyName && e.propertyName !== "transform") return;
+      if (settled) return;
+      settled = true;
+      leaf.removeEventListener("transitionend", done);
+      index = target;
+      root.classList.remove("flipbook--turning");
+      leaf.style.transition = "none";
+      leaf.style.transform = "rotateY(0deg)";
+      animating = false;
+      render();
+    };
+    leaf.addEventListener("transitionend", done);
+    setTimeout(done, 1100);
+  };
+
+  prevBtn.addEventListener("click", () => go(index - 1));
+  nextBtn.addEventListener("click", () => go(index + 1));
+  range.addEventListener("change", () => go(parseInt(range.value, 10)));
+
+  root.tabIndex = 0;
+  root.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      isRtl ? go(index - 1) : go(index + 1);
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      isRtl ? go(index + 1) : go(index - 1);
+    }
+  });
+
+  let sx = 0, sy = 0, touching = false;
+  book.addEventListener("touchstart", (e) => {
+    if (animating) return;
+    sx = e.touches[0].clientX;
+    sy = e.touches[0].clientY;
+    touching = true;
+  }, { passive: true });
+  book.addEventListener("touchend", (e) => {
+    if (!touching) return;
+    touching = false;
+    const dx = e.changedTouches[0].clientX - sx;
+    const dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+      const swipedLeft = dx < 0;
+      if (isRtl) swipedLeft ? go(index - 1) : go(index + 1);
+      else swipedLeft ? go(index + 1) : go(index - 1);
+    }
+  }, { passive: true });
+
+  book.addEventListener("click", () => {
+    if (!animating) window.open(pages[index].img, "_blank", "noopener");
+  });
+
+  render();
+});
+
+/* ── Newspaper archive — two-page open book (alt design) ───── */
+document.querySelectorAll("[data-bookview]").forEach((root) => {
+  const dataEl = root.querySelector("[data-bookview-data]");
+  if (!dataEl) return;
+  let pages = [];
+  try {
+    pages = JSON.parse(dataEl.textContent);
+  } catch (e) {
+    return;
+  }
+  if (!pages.length) return;
+
+  const isRtl = root.getAttribute("dir") === "rtl";
+  const leftImg = root.querySelector("[data-book-left]");
+  const rightImg = root.querySelector("[data-book-right]");
+  const leaf = root.querySelector("[data-book-leaf]");
+  const front = root.querySelector("[data-book-front]");
+  const back = root.querySelector("[data-book-back]");
+  const prevBtn = root.querySelector("[data-book-prev]");
+  const nextBtn = root.querySelector("[data-book-next]");
+  const dateEl = root.querySelector("[data-book-date]");
+  const counterEl = root.querySelector("[data-book-counter]");
+  const expand = root.querySelector("[data-book-expand]");
+
+  const total = pages.length;
+  const TURN = isRtl ? 180 : -180;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let index = 0; // index of the left (leading) page in the spread
+  let animating = false;
+
+  const blank =
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='14'%3E%3Crect width='10' height='14' fill='%23fdfaf3'/%3E%3C/svg%3E";
+
+  const imgAt = (i) => (i >= 0 && i < total ? pages[i].img : blank);
+
+  const preload = (i) => {
+    if (i >= 0 && i < total) {
+      const im = new Image();
+      im.src = pages[i].img;
+    }
+  };
+
+  const render = () => {
+    leftImg.src = imgAt(index);
+    leftImg.alt = pages[index] ? pages[index].date : "";
+    rightImg.src = imgAt(index + 1);
+    rightImg.alt = pages[index + 1] ? pages[index + 1].date : "";
+
+    const shown = index + 1 < total ? index + 2 : index + 1;
+    const lead = pages[index] ? pages[index].date : "";
+    dateEl.textContent = lead;
+    counterEl.textContent = shown + " / " + total;
+    expand.href = imgAt(index);
+
+    prevBtn.disabled = index <= 0;
+    nextBtn.disabled = index >= total - 1;
+    preload(index + 2);
+    preload(index - 1);
+  };
+
+  const go = (target) => {
+    if (animating || target < 0 || target >= total || target === index) return;
+    const forward = target > index;
+
+    if (reduceMotion) {
+      index = target;
+      render();
+      return;
+    }
+
+    animating = true;
+    root.classList.add("bookview--turning");
+
+    if (forward) {
+      // The right page swings over the spine to become the new left page.
+      front.src = imgAt(index + 1);
+      back.src = imgAt(index + 1);
+      rightImg.src = imgAt(index + 2); // reveal the new right beneath the lifting leaf
+      leaf.style.transition = "none";
+      leaf.style.transform = "rotateY(0deg)";
+      void leaf.offsetWidth;
+      leaf.style.transition = "";
+      leaf.style.transform = "rotateY(" + TURN + "deg)";
+    } else {
+      // The left page swings back to the right to reveal the previous spread.
+      front.src = imgAt(index);
+      back.src = imgAt(index);
+      leftImg.src = imgAt(target); // reveal the new left beneath the leaf
+      leaf.style.transition = "none";
+      leaf.style.transform = "rotateY(" + TURN + "deg)";
+      void leaf.offsetWidth;
+      leaf.style.transition = "";
+      leaf.style.transform = "rotateY(0deg)";
+    }
+
+    let settled = false;
+    const done = (e) => {
+      if (e && e.propertyName && e.propertyName !== "transform") return;
+      if (settled) return;
+      settled = true;
+      leaf.removeEventListener("transitionend", done);
+      index = target;
+      root.classList.remove("bookview--turning");
+      leaf.style.transition = "none";
+      leaf.style.transform = "rotateY(0deg)";
+      animating = false;
+      render();
+    };
+    leaf.addEventListener("transitionend", done);
+    setTimeout(done, 1200);
+  };
+
+  prevBtn.addEventListener("click", () => go(index - 1));
+  nextBtn.addEventListener("click", () => go(index + 1));
+
+  root.tabIndex = 0;
+  root.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      isRtl ? go(index - 1) : go(index + 1);
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      isRtl ? go(index + 1) : go(index - 1);
+    }
+  });
+
+  let sx = 0, sy = 0, touching = false;
+  const bookEl = root.querySelector("[data-book-book]");
+  bookEl.addEventListener("touchstart", (e) => {
+    if (animating) return;
+    sx = e.touches[0].clientX;
+    sy = e.touches[0].clientY;
+    touching = true;
+  }, { passive: true });
+  bookEl.addEventListener("touchend", (e) => {
+    if (!touching) return;
+    touching = false;
+    const dx = e.changedTouches[0].clientX - sx;
+    const dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+      const swipedLeft = dx < 0;
+      if (isRtl) swipedLeft ? go(index - 1) : go(index + 1);
+      else swipedLeft ? go(index + 1) : go(index - 1);
+    }
+  }, { passive: true });
+
+  render();
+});

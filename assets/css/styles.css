@@ -1019,10 +1019,25 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
 
 /* ——— RTL ——————————————————————————————————————————————— */
 [dir="rtl"] body { font-family: "Tajawal","Outfit",sans-serif; }
-[dir="rtl"] .eyebrow { flex-direction: row-reverse; }
-[dir="rtl"] .eyebrow::before { display: none; }
-[dir="rtl"] .eyebrow::after { content: ''; display: inline-block; width: 26px; height: 2px; background: var(--gold); border-radius: 2px; order: -1; }
+[dir="rtl"] .eyebrow {
+  flex-direction: row-reverse;
+  font-size: .98rem;
+  letter-spacing: 0;
+  font-weight: 700;
+  gap: .6rem;
+}
+[dir="rtl"] .eyebrow::before { display: inline-block; }
+[dir="rtl"] .eyebrow::after { display: none; }
+[dir="rtl"] .section-head.centered .eyebrow::before { display: inline-block; }
 [dir="rtl"] .section-head.centered .eyebrow::after { display: none; }
+/* Arabic hero eyebrow: larger, no letter-spacing (Arabic letters connect) */
+[dir="rtl"] .page-hero .eyebrow,
+[dir="rtl"] .page-hero--animate .hero-animate-item--eyebrow,
+[dir="rtl"] .page-hero--animate.is-loaded .hero-animate-item--eyebrow {
+  font-size: 1.05rem;
+  letter-spacing: 0;
+  font-weight: 700;
+}
 [dir="rtl"] .site-nav { flex-direction: row; }
 [dir="rtl"] .nav-dropdown-menu { right: auto; left: 0; }
 [dir="rtl"] .hero-card ul { padding-inline-start: 0; padding-inline-end: 1.1rem; }
@@ -1510,6 +1525,34 @@ input::placeholder, textarea::placeholder { color: var(--t3); }
 /* .timeline-year is now a standalone large label — styles merged above */
 
 /* ── Values page ────────────────────────────────────────────── */
+.values-intro { margin-bottom: 1rem; }
+.values-intro-title {
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.05;
+  color: var(--navy);
+  margin: 0;
+}
+.values-intro-title span {
+  background: linear-gradient(120deg, var(--brand) 0%, var(--brand-light) 55%, #5d83bd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.values-intro-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 1.1rem auto 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--brand) 0%, var(--brand-light) 100%);
+}
+[dir="rtl"] .values-intro-title {
+  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+  letter-spacing: 0;
+}
 .values-detail-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

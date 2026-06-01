@@ -1,4 +1,14 @@
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addFilter("companiesByPageOrder", (companies) => {
+    const list = [];
+    for (const sector of companies.sectors) {
+      for (const company of sector.companies) {
+        list.push(company);
+      }
+    }
+    return list.sort((a, b) => (a.pageOrder ?? 999) - (b.pageOrder ?? 999));
+  });
+
   // Passthrough — do NOT let Eleventy process these
   eleventyConfig.addPassthroughCopy("src/assets");
 

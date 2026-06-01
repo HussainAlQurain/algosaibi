@@ -1,0 +1,55 @@
+{# Two-page open-book archive viewer (alt design). Expects: navLang ("en"|"ar"), assetPrefix ("" | "../") #}
+{% set isAr = navLang == "ar" %}
+<div class="bookview reveal delay-1" data-bookview dir="{{ 'rtl' if isAr else 'ltr' }}">
+  <div class="bookview__scene">
+    <button type="button" class="bookview__nav bookview__nav--prev" data-book-prev aria-label="{{ 'الصفحة السابقة' if isAr else 'Previous page' }}">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+    </button>
+
+    <div class="bookview__book" data-book-book>
+      <div class="bookview__page bookview__page--left">
+        <img data-book-left src="" alt="" decoding="async" />
+        <span class="bookview__page-shade" aria-hidden="true"></span>
+      </div>
+      <div class="bookview__page bookview__page--right">
+        <img data-book-right src="" alt="" decoding="async" />
+        <span class="bookview__page-shade" aria-hidden="true"></span>
+      </div>
+
+      <div class="bookview__leaf" data-book-leaf aria-hidden="true">
+        <div class="bookview__leaf-face bookview__leaf-face--front">
+          <img data-book-front src="" alt="" />
+          <span class="bookview__leaf-gloss" aria-hidden="true"></span>
+        </div>
+        <div class="bookview__leaf-face bookview__leaf-face--back">
+          <img data-book-back src="" alt="" />
+          <span class="bookview__leaf-gloss" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="bookview__spine" aria-hidden="true"></div>
+    </div>
+
+    <button type="button" class="bookview__nav bookview__nav--next" data-book-next aria-label="{{ 'الصفحة التالية' if isAr else 'Next page' }}">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <div class="bookview__bar">
+    <span class="bookview__source">{{ 'اليوم' if isAr else 'Al-Yaum' }}</span>
+    <span class="bookview__date" data-book-date></span>
+    <span class="bookview__counter" data-book-counter></span>
+    <a class="bookview__expand" data-book-expand href="#" target="_blank" rel="noopener" aria-label="{{ 'فتح الصورة كاملة' if isAr else 'Open full image' }}">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-8 8M10 20H4v-6M4 20l8-8"/></svg>
+      <span>{{ 'عرض كامل' if isAr else 'Full view' }}</span>
+    </a>
+  </div>
+
+  <script type="application/json" data-bookview-data>
+  [
+  {%- for p in archive.pages -%}
+    {"img":"{{ assetPrefix }}{{ p.img }}","date":"{{ p.dateAr if isAr else p.dateEn }}"}{% if not loop.last %},{% endif %}
+  {%- endfor -%}
+  ]
+  </script>
+</div>

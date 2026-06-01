@@ -5,6 +5,7 @@
       "ar": "الصناعة والتصنيع",
       "companies": [
         {
+          "pageOrder": 18,
           "en": "Tayyah Industrial",
           "ar": "شركة طية للصناعة",
           "logo": "assets/images/tayyah-logo.png",
@@ -14,6 +15,7 @@
           "descriptionAr": "خدمات التصنيع الصناعي والمقاولات"
         },
         {
+          "pageOrder": 3,
           "en": "Arabian Pipecoating (APCO)",
           "ar": "الشركة العربية لتغليف الأنابيب",
           "logo": "assets/images/arabian-pipecoating-logo.png",
@@ -23,6 +25,7 @@
           "descriptionAr": "خدمات طلاء الأنابيب والحماية من التآكل"
         },
         {
+          "pageOrder": 2,
           "en": "Crown Arabia",
           "ar": "شركة كراون العربية",
           "logo": "assets/images/crown-logo.png",
@@ -32,6 +35,7 @@
           "descriptionAr": "تصنيع علب المشروبات المصنوعة من الألمنيوم"
         },
         {
+          "pageOrder": 1,
           "en": "Jotun Powder Coatings",
           "ar": "شركة جوتن باودر كوتنغز العربية السعودية",
           "logo": "assets/images/jotun-logo.svg",
@@ -47,6 +51,7 @@
       "ar": "الطاقة والكهرباء",
       "companies": [
         {
+          "pageOrder": 19,
           "en": "Solar Arabia",
           "ar": "الشركة العربية للطاقة الشمسية",
           "logo": "assets/images/solar-arabia-logo.png",
@@ -56,6 +61,7 @@
           "descriptionAr": "استشارات الطاقة المتجددة وتطوير المشاريع"
         },
         {
+          "pageOrder": 4,
           "en": "Tecmo Arabia Ltd",
           "ar": "شركة تكمو العربية",
           "logo": "assets/images/tecmo-logo.png",
@@ -71,6 +77,7 @@
       "ar": "النقل والخدمات اللوجستية",
       "companies": [
         {
+          "pageOrder": 6,
           "en": "IACC",
           "ar": "الشركة الدولية للنقل المشترك",
           "logo": "assets/images/iacc-logo.png",
@@ -80,6 +87,7 @@
           "descriptionAr": "خدمات الشحن والتخليص الجمركي"
         },
         {
+          "pageOrder": 5,
           "en": "GAC Saudi Arabia",
           "ar": "شركة الخليج العربي للشحن",
           "logo": "assets/images/gac-logo.png",
@@ -89,6 +97,7 @@
           "descriptionAr": "خدمات الشحن واللوجستيات والخدمات البحرية"
         },
         {
+          "pageOrder": 7,
           "en": "Arabian Gulf Shipping Company",
           "ar": "الشركة السعودية للتفريغ والتحميل",
           "logo": "assets/images/agsc.png",
@@ -104,6 +113,7 @@
       "ar": "الأغذية والتموين",
       "companies": [
         {
+          "pageOrder": 8,
           "en": "Mathaqat Foods Co.",
           "ar": "شركة مذاقات للمواد الغذائية",
           "logo": "assets/images/mathaqat-logo.png",
@@ -113,6 +123,7 @@
           "descriptionAr": "المنتجات الغذائية والتوزيع"
         },
         {
+          "pageOrder": 10,
           "en": "Qaf Catering Services",
           "ar": "شركة قاف لتقديم الوجبات",
           "logo": "assets/images/qaf-logo.png",
@@ -122,6 +133,7 @@
           "descriptionAr": "عمليات التموين والخدمات الغذائية"
         },
         {
+          "pageOrder": 9,
           "en": "Mathaqat Al Sharq",
           "ar": "شركة مذاقات الشرق للمقاولات العامة",
           "logo": "assets/images/mathaqat-alsharq-logo.svg",
@@ -137,6 +149,7 @@
       "ar": "الضيافة والترفيه",
       "companies": [
         {
+          "pageOrder": 11,
           "en": "AlGosaibi Hotel",
           "ar": "فندق القصيبي",
           "logo": "assets/images/gosaibi-hotel-logo.png",
@@ -146,6 +159,7 @@
           "descriptionAr": "خدمات فندقية وضيافة في الخبر"
         },
         {
+          "pageOrder": 12,
           "en": "AlGosaibi Sport Center",
           "ar": "مركز القصيبي الرياضي",
           "logo": "assets/images/sport-center-logo.png",
@@ -155,6 +169,7 @@
           "descriptionAr": "مرفق رياضي وترفيهي في المنطقة الشرقية"
         },
         {
+          "pageOrder": 17,
           "en": "Club 8",
           "ar": "كلوب ثمانية",
           "logo": "assets/images/club8-logo.png",
@@ -164,6 +179,7 @@
           "descriptionAr": "نادي رياضي واجتماعي"
         },
         {
+          "pageOrder": 13,
           "en": "Al Gosaibi Village",
           "ar": "قرية القصيبي",
           "logo": "assets/images/algosaibi-village-logo.png",
@@ -179,6 +195,7 @@
       "ar": "الإعلام والسفر",
       "companies": [
         {
+          "pageOrder": 14,
           "en": "Hal Media",
           "ar": "هال ميديا",
           "logo": "assets/images/hal-media.png",
@@ -188,6 +205,7 @@
           "descriptionAr": "خدمات الإنتاج الإعلامي والاتصال"
         },
         {
+          "pageOrder": 15,
           "en": "Fal AlSharq",
           "ar": "فال الشرق",
           "logo": "assets/images/fal-alsharq-logo.png",
@@ -197,6 +215,7 @@
           "descriptionAr": "خدمات الإعلام والنشر الإقليمي"
         },
         {
+          "pageOrder": 16,
           "en": "Yata Travel",
           "ar": "ياتا للسفر والسياحة",
           "logo": "assets/images/yata-logo.png",

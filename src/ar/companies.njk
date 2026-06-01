@@ -14,7 +14,7 @@ permalink: "ar/companies.html"
     <div class="hero-copy reveal">
       <p class="eyebrow">هيكل المجموعة</p>
       <h1><span>شركاتنا</span></h1>
-      <p>تضم محفظتنا 19 شركة ضمن المجموعة.</p>
+      <p>تضم مجموعتنا 19 شركة.</p>
     </div>
   </div>
 </section>
@@ -22,14 +22,13 @@ permalink: "ar/companies.html"
 <section class="section">
   <div class="container">
     <div class="section-head centered reveal">
-      <p class="eyebrow">محفظتنا</p>
-      <h2>جميع الشركات</h2>
-      <p style="color:var(--t2);max-width:60ch;margin:1rem auto 0;line-height:1.8;">فيما يلي جميع شركات محفظتنا. يرتبط كل بطاقة بالموقع العام للشركة عندما يكون متاحاً.</p>
+      <p class="eyebrow">شركاتنا</p>
+      <h2>شركاتنا</h2>
+      <p style="color:var(--t2);max-width:60ch;margin:1rem auto 0;line-height:1.8;">فيما يلي جميع شركات المجموعة. يرتبط كل بطاقة بالموقع العام للشركة عندما يكون متاحاً.</p>
     </div>
 
     <div class="companies-cards-grid reveal">
-      {% for sector in companies.sectors %}
-        {% for company in sector.companies %}
+      {% for company in companies | companiesByPageOrder %}
         {% if company.url %}
         <a href="{{ company.url }}" target="_blank" rel="noopener" class="company-box company-box--link">
         {% else %}
@@ -60,7 +59,6 @@ permalink: "ar/companies.html"
         {% else %}
         </div>
         {% endif %}
-        {% endfor %}
       {% endfor %}
     </div>
 

@@ -43,13 +43,6 @@ document.querySelectorAll(".reveal").forEach((element) => {
   observer.observe(element);
 });
 
-document.querySelectorAll('a[href="#top"]').forEach((anchor) => {
-  anchor.addEventListener("click", (event) => {
-    event.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-});
-
 // Sector accordion — infinite scroll + hover expand + mouse & touch drag
 const sectorContainer = document.getElementById("sectorsContainer");
 if (sectorContainer && window.innerWidth > 900) {

@@ -43,13 +43,6 @@ document.querySelectorAll(".reveal").forEach((element) => {
   observer.observe(element);
 });
 
-document.querySelectorAll('a[href="#top"]').forEach((anchor) => {
-  anchor.addEventListener("click", (event) => {
-    event.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-});
-
 // Sector accordion — infinite scroll + hover expand + mouse & touch drag
 const sectorContainer = document.getElementById("sectorsContainer");
 if (sectorContainer && window.innerWidth > 900) {
@@ -330,8 +323,9 @@ document.querySelectorAll("[data-flipbook]").forEach((root) => {
     root.classList.add("flipbook--turning");
 
     if (forward) {
+      // Leaf shows the current page turning away; static reveals the next page beneath.
       front.src = pages[index].img;
-      back.src = pages[target].img;
+      back.src = pages[index].img;
       staticImg.src = pages[target].img;
       leaf.style.transition = "none";
       leaf.style.transform = "rotateY(0deg)";
@@ -555,3 +549,92 @@ document.querySelectorAll("[data-bookview]").forEach((root) => {
 
   render();
 });
+
+/* ── Media gallery lightbox ────────────────────────────────── */
+(function () {
+  const lightbox = document.getElementById("galleryLightbox");
+  if (!lightbox) return;
+
+  const img = lightbox.querySelector(".gallery-lightbox__img");
+  const caption = lightbox.querySelector(".gallery-lightbox__caption");
+  const counter = lightbox.querySelector("[data-gallery-counter]");
+  const prevBtn = lightbox.querySelector("[data-gallery-prev]");
+  const nextBtn = lightbox.querySelector("[data-gallery-next]");
+  const isRtl = document.documentElement.getAttribute("dir") === "rtl";
+
+  let slides = [];
+  let index = 0;
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  const getStep = (dir) => (isRtl ? -dir : dir);
+
+  const renderSlide = () => {
+    const slide = slides[index];
+    if (!slide) return;
+    img.src = slide.src;
+    img.alt = slide.alt;
+    caption.textContent = slide.alt;
+    counter.textContent = index + 1 + " / " + slides.length;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === slides.length - 1;
+  };
+
+  const open = (group, startIndex) => {
+    slides = Array.from(group.querySelectorAll("[data-gallery-trigger]")).map((btn) => ({
+      src: btn.dataset.full,
+      alt: btn.dataset.alt || "",
+    }));
+    index = startIndex;
+    renderSlide();
+    lightbox.hidden = false;
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    lightbox.querySelector(".gallery-lightbox__close").focus();
+  };
+
+  const close = () => {
+    lightbox.hidden = true;
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    img.removeAttribute("src");
+  };
+
+  const step = (dir) => {
+    const next = index + getStep(dir);
+    if (next < 0 || next >= slides.length) return;
+    index = next;
+    renderSlide();
+  };
+
+  document.querySelectorAll("[data-gallery-group]").forEach((group) => {
+    group.querySelectorAll("[data-gallery-trigger]").forEach((btn, i) => {
+      btn.addEventListener("click", () => open(group, i));
+    });
+  });
+
+  lightbox.querySelectorAll("[data-gallery-close]").forEach((el) => {
+    el.addEventListener("click", close);
+  });
+  prevBtn.addEventListener("click", () => step(-1));
+  nextBtn.addEventListener("click", () => step(1));
+
+  document.addEventListener("keydown", (e) => {
+    if (lightbox.hidden) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") step(-1);
+    if (e.key === "ArrowRight") step(1);
+  });
+
+  const dialog = lightbox.querySelector(".gallery-lightbox__dialog");
+  dialog.addEventListener("touchstart", (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  dialog.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
+    step(dx < 0 ? 1 : -1);
+  }, { passive: true });
+})();

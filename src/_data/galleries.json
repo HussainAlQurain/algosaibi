@@ -1,0 +1,101 @@
+{
+  "sections": [
+    {
+      "id": "events",
+      "titleEn": "Events & Gatherings",
+      "titleAr": "صور وفعاليات",
+      "leadEn": "Moments from group occasions, leadership gatherings, and corporate milestones.",
+      "leadAr": "لحظات من مناسبات المجموعة واللقاءات القيادية والمحطات المؤسسية.",
+      "images": [
+        {
+          "src": "assets/images/mathaqat.jpg",
+          "altEn": "Mathaqat Foods dining and hospitality setting",
+          "altAr": "مائدة طعام في شركة مذاقات للمواد الغذائية"
+        },
+        {
+          "src": "assets/images/Tech.Advice-5.png",
+          "altEn": "Team members at work",
+          "altAr": "فريق العمل أثناء أداء المهام"
+        },
+        {
+          "src": "assets/images/IMG_9803.PNG",
+          "altEn": "AHALGOSAIBI company building, Al Khobar",
+          "altAr": "مبنى شركة أحمد حمد القصيبي وإخوانه، الخبر"
+        },
+        {
+          "src": "assets/images/subsidiaries-banner.webp",
+          "altEn": "Group companies and operations",
+          "altAr": "شركات وعمليات المجموعة"
+        }
+      ]
+    },
+    {
+      "id": "recent",
+      "titleEn": "Recent Photos",
+      "titleAr": "صور جديدة",
+      "leadEn": "A selection of recent imagery from across the Group's presence and operations.",
+      "leadAr": "مجموعة من الصور الحديثة تعكس حضور المجموعة وعملياتها.",
+      "images": [
+        {
+          "src": "assets/images/algosaibi-hotel.jpg",
+          "altEn": "Algosaibi Hotel exterior",
+          "altAr": "الواجهة الخارجية لفندق القصيبي"
+        },
+        {
+          "src": "assets/images/IMG_9801.PNG",
+          "altEn": "AHALGOSAIBI Group building exterior",
+          "altAr": "واجهة مبنى مجموعة القصيبي"
+        },
+        {
+          "src": "assets/images/IMG_9800.PNG",
+          "altEn": "Corporate headquarters view",
+          "altAr": "منظر المقر الرئيسي للشركة"
+        },
+        {
+          "src": "assets/images/media-events-hero.webp",
+          "altEn": "Eastern Province skyline at dusk",
+          "altAr": "أفق المنطقة الشرقية عند الغروب"
+        }
+      ]
+    },
+    {
+      "id": "heritage",
+      "titleEn": "Heritage Gallery",
+      "titleAr": "صور قديمة",
+      "leadEn": "Archival photographs reflecting the Group's long-standing commercial and family legacy.",
+      "leadAr": "صور أرشيفية تعكس الإرث التجاري والعائلي الراسخ للمجموعة.",
+      "images": [
+        {
+          "src": "assets/images/history-founder.jpeg",
+          "altEn": "Sheikh Hamad bin Ahmad Algosaibi",
+          "altAr": "الشيخ حمد بن أحمد القصيبي"
+        },
+        {
+          "src": "assets/images/history-ancestors.jpeg",
+          "altEn": "Algosaibi family and commercial heritage",
+          "altAr": "إرث عائلي وتجاري للقصيبي"
+        },
+        {
+          "src": "assets/images/history-2.avif",
+          "altEn": "Early days of Algosaibi in the Eastern Province",
+          "altAr": "البدايات الأولى للقصيبي في المنطقة الشرقية"
+        },
+        {
+          "src": "assets/images/history-1.png",
+          "altEn": "Sheikh Hamad bin Ahmad Algosaibi",
+          "altAr": "الشيخ حمد بن أحمد القصيبي"
+        },
+        {
+          "src": "assets/images/about-warehouse-legacy.jpg",
+          "altEn": "Industrial logistics heritage in the Eastern Province",
+          "altAr": "إرث لوجستي صناعي في المنطقة الشرقية"
+        },
+        {
+          "src": "assets/images/newspaper.jpeg",
+          "altEn": "Press coverage from the Group archive",
+          "altAr": "تغطية صحفية من أرشيف المجموعة"
+        }
+      ]
+    }
+  ]
+}

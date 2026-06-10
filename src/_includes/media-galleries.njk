@@ -1,0 +1,56 @@
+{# Photo galleries. Expects: navLang ("en"|"ar"), assetPrefix ("" | "../") #}
+{% set isAr = navLang == "ar" %}
+<section class="section media-galleries-section" id="galleries">
+  <div class="container">
+    <div class="section-head centered reveal">
+      <p class="eyebrow">{{ 'معرض الصور' if isAr else 'Photo Galleries' }}</p>
+      <h2>{{ 'صور من المجموعة' if isAr else 'Images from the Group' }}</h2>
+      <p class="section-lead">{{ 'مجموعات صور مناسبات وفعاليات وصور حديثة وأرشيفية من أحمد حمد القصيبي وإخوانه.' if isAr else 'Curated collections of events, recent highlights, and heritage photography from Ahmad Hamad Algosaibi &amp; Bros. Co.' }}</p>
+    </div>
+
+    <div class="media-galleries-stack">
+      {% for gallery in galleries.sections %}
+      <article class="media-gallery-block reveal{% if loop.index > 1 %} delay-{{ loop.index0 }}{% endif %}" id="gallery-{{ gallery.id }}">
+        <div class="media-gallery-head">
+          <h3>{{ gallery.titleAr if isAr else gallery.titleEn }}</h3>
+          <p>{{ gallery.leadAr if isAr else gallery.leadEn }}</p>
+        </div>
+        <div class="media-gallery-grid" data-gallery-group>
+          {% for image in gallery.images %}
+          <button
+            type="button"
+            class="media-gallery-item"
+            data-gallery-trigger
+            data-full="{{ assetPrefix }}{{ image.src }}"
+            data-alt="{{ image.altAr if isAr else image.altEn }}"
+            aria-label="{{ image.altAr if isAr else image.altEn }}"
+          >
+            <img src="{{ assetPrefix }}{{ image.src }}" alt="{{ image.altAr if isAr else image.altEn }}" loading="lazy" decoding="async" />
+          </button>
+          {% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<div class="gallery-lightbox" id="galleryLightbox" hidden aria-hidden="true">
+  <div class="gallery-lightbox__backdrop" data-gallery-close tabindex="-1"></div>
+  <div class="gallery-lightbox__dialog" role="dialog" aria-modal="true" aria-label="{{ 'عرض الصورة' if isAr else 'Image viewer' }}">
+    <button type="button" class="gallery-lightbox__close" data-gallery-close aria-label="{{ 'إغلاق' if isAr else 'Close' }}">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--prev" data-gallery-prev aria-label="{{ 'الصورة السابقة' if isAr else 'Previous image' }}">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--next" data-gallery-next aria-label="{{ 'الصورة التالية' if isAr else 'Next image' }}">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <figure class="gallery-lightbox__figure">
+      <img class="gallery-lightbox__img" src="" alt="" />
+      <figcaption class="gallery-lightbox__caption"></figcaption>
+    </figure>
+    <p class="gallery-lightbox__counter" data-gallery-counter aria-live="polite"></p>
+  </div>
+</div>

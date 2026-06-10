@@ -323,8 +323,9 @@ document.querySelectorAll("[data-flipbook]").forEach((root) => {
     root.classList.add("flipbook--turning");
 
     if (forward) {
+      // Leaf shows the current page turning away; static reveals the next page beneath.
       front.src = pages[index].img;
-      back.src = pages[target].img;
+      back.src = pages[index].img;
       staticImg.src = pages[target].img;
       leaf.style.transition = "none";
       leaf.style.transform = "rotateY(0deg)";

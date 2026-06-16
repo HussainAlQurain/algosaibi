@@ -1,35 +1,30 @@
-{# Photo galleries. Expects: navLang ("en"|"ar"), assetPrefix ("" | "../") #}
+{# Photo album. Expects: navLang ("en"|"ar"), assetPrefix ("" | "../") #}
 {% set isAr = navLang == "ar" %}
-<section class="section media-galleries-section" id="galleries">
+<section class="section photo-album-section" id="galleries">
   <div class="container">
     <div class="section-head centered reveal">
-      <p class="eyebrow">{{ 'معرض الصور' if isAr else 'Photo Galleries' }}</p>
-      <h2>{{ 'صور من المجموعة' if isAr else 'Images from the Group' }}</h2>
-      <p class="section-lead">{{ 'مجموعات صور مناسبات وفعاليات وصور حديثة وأرشيفية من أحمد حمد القصيبي وإخوانه.' if isAr else 'Curated collections of events, recent highlights, and heritage photography from Ahmad Hamad Algosaibi &amp; Bros. Co.' }}</p>
+      <p class="eyebrow">{{ 'ألبوم الصور' if isAr else 'Photo Album' }}</p>
+      <h2>{{ galleries.albumTitleAr if isAr else galleries.albumTitleEn }}</h2>
+      <p class="section-lead">{{ galleries.albumLeadAr if isAr else galleries.albumLeadEn }}</p>
     </div>
 
-    <div class="media-galleries-stack">
-      {% for gallery in galleries.sections %}
-      <article class="media-gallery-block reveal{% if loop.index > 1 %} delay-{{ loop.index0 }}{% endif %}" id="gallery-{{ gallery.id }}">
-        <div class="media-gallery-head">
-          <h3>{{ gallery.titleAr if isAr else gallery.titleEn }}</h3>
-          <p>{{ gallery.leadAr if isAr else gallery.leadEn }}</p>
-        </div>
-        <div class="media-gallery-grid" data-gallery-group>
-          {% for image in gallery.images %}
-          <button
-            type="button"
-            class="media-gallery-item"
-            data-gallery-trigger
-            data-full="{{ assetPrefix }}{{ image.src }}"
-            data-alt="{{ image.altAr if isAr else image.altEn }}"
-            aria-label="{{ image.altAr if isAr else image.altEn }}"
-          >
+    <div class="photo-album reveal delay-1" data-gallery-group>
+      {% for image in galleries.images %}
+      <button
+        type="button"
+        class="photo-album__item"
+        data-gallery-trigger
+        data-full="{{ assetPrefix }}{{ image.src }}"
+        data-alt="{{ image.altAr if isAr else image.altEn }}"
+        aria-label="{{ image.altAr if isAr else image.altEn }}"
+      >
+        <span class="photo-album__frame">
+          <span class="photo-album__photo">
             <img src="{{ assetPrefix }}{{ image.src }}" alt="{{ image.altAr if isAr else image.altEn }}" loading="lazy" decoding="async" />
-          </button>
-          {% endfor %}
-        </div>
-      </article>
+          </span>
+          <span class="photo-album__caption">{{ image.altAr if isAr else image.altEn }}</span>
+        </span>
+      </button>
       {% endfor %}
     </div>
   </div>
